@@ -25,8 +25,6 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     var workstation = this.wsService.getWorkstationData();
     this.store.dispatch(new SetWorkstation({id: workstation.id, storeId: workstation.storeId}));
-
-    var wsData = this.store.selectSnapshot(WorkstationState.getWorkstation);
   }
 
   scanBarcode(barcode: string): void {
