@@ -9,7 +9,7 @@ export class ArticleService {
 
   constructor() { }
 
-  CheckBarcode(barcode: string): Article | void{
+  CheckBarcode(barcode: string): Article{
     const article = Articles.find(h => h.itemID === barcode) as Article;
 
     return article === undefined ? null : article;
