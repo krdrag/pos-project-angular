@@ -12,6 +12,13 @@
         <p>Transaction started</p>
         <p>{{transaction.startDate.toISOString()}}</p>
 
+        <li *ngFor="let taObj of transaction.objects; let i = index">
+
+          <span *ngIf="taObj.type==='TaArticle'">
+            {{taObj.itemID}} {{taObj.itemPrice}}
+          </span>
+
+        </li>
 
         <p>Workstation: {{transaction.workstationID}} Store: {{transaction.storeID}}</p>
         <p>Transaction: {{transaction.transactionID}}</p>

@@ -1,4 +1,4 @@
-import { UpdateTransaction } from './transaction.actions';
+import { StartTransaction, AddTaObj } from './transaction.actions';
 import { Action, Selector, State, StateContext } from '@ngxs/store';
 import { Injectable } from '@angular/core';
 import { Transaction } from 'src/app/models/transaction.model';
@@ -19,12 +19,27 @@ export class TransactionState {
         return state.transaction;
     }
 
-    @Action(UpdateTransaction)
+    @Action(StartTransaction)
     create({getState, patchState }: StateContext<TransactionStateModel>, 
-                     { payload }: UpdateTransaction) {
+                     { payload }: StartTransaction) {
         const state = getState();
         patchState({
             transaction: payload
         })
+    }
+
+    @Action(AddTaObj)
+    addTaObj({getState, patchState }: StateContext<TransactionStateModel>, 
+                     { payload }: AddTaObj) {
+        const state = getState();
+        patchState({
+            transaction: {
+                ...state.transaction,
+                objects: [
+                    ...state.transaction.objects,
+                    payload
+                ]
+            }
+        });
     }
 }
