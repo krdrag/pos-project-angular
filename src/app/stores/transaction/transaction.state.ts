@@ -1,4 +1,4 @@
-import { StartTransaction } from './transaction.actions';
+import { UpdateTransaction } from './transaction.actions';
 import { Action, Selector, State, StateContext } from '@ngxs/store';
 import { Injectable } from '@angular/core';
 import { Transaction } from 'src/app/models/transaction.model';
@@ -19,45 +19,12 @@ export class TransactionState {
         return state.transaction;
     }
 
-    @Action(StartTransaction)
+    @Action(UpdateTransaction)
     create({getState, patchState }: StateContext<TransactionStateModel>, 
-                     { payload }: StartTransaction) {
+                     { payload }: UpdateTransaction) {
         const state = getState();
         patchState({
             transaction: payload
         })
     }
-
-    // @Action(ScanBarcode)
-    // ScanBarcode({getState, patchState }: StateContext<TransactionStateModel>, 
-    //             { barcode }: ScanBarcode) {
-        
-        
-        
-        
-    //                 const state = getState();
-
-
-
-
-    //     patchState({
-    //         workstation: payload
-    //     })
-    // }
-
-
-    /*
-    @Selector()
-    static getWorkstation(state: WorkstationStateModel) {
-        return state.workstation
-    }
-
-    @Action(SetWorkstation)
-    add({getState, patchState }: StateContext<WorkstationStateModel>, { payload }: SetWorkstation) {
-        const state = getState();
-        patchState({
-            workstation: payload
-        })
-    }
-    */
 }
