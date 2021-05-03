@@ -1,3 +1,6 @@
+import { AnonymousOnlyGuard } from './guards/anonymous-only.guard';
+import { UserState } from './stores/user/user.state';
+import { AuthGuard } from './guards/auth.guard';
 import { TransactionState } from './stores/transaction/transaction.state';
 import { environment } from './../environments/environment.prod';
 import { WorkstationState } from './stores/workstation/workstation.state';
@@ -23,13 +26,15 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     BrowserModule,
     FormsModule,
     RouterModule.forRoot([
-      {path: 'login', component: LoginComponent},
-      {path: 'pos', component: PosComponent},
-      { path: '', redirectTo: '/pos', pathMatch: 'full' }
+      {path: 'login', component: LoginComponent, canActivate: [AnonymousOnlyGuard]},
+      {path: 'pos', component: PosComponent, canActivate: [AuthGuard]},
+      { path: '', redirectTo: '/pos', pathMatch: 'full' },
+      { path: '**', component: NotFoundComponent }
     ]),
     NgxsModule.forRoot([
       WorkstationState,
-      TransactionState
+      TransactionState,
+      UserState
     ], { developmentMode: true }),
   ],
   providers: [],
