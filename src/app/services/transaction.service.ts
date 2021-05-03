@@ -9,6 +9,7 @@ import { Transaction } from '../models/transaction.model';
 import { Store } from '@ngxs/store';
 import { v4 as uuidv4 } from 'uuid';
 import { Article } from '../models/article.model';
+import { TaTotal } from '../models/TaObjects/taTotal.model';
 
 @Injectable({
   providedIn: 'root'
@@ -46,13 +47,15 @@ export class TransactionService {
     return true;
   }
 
-  Pay(amount: number): boolean{
+  Pay(): boolean{
 
     var transaction = this.store.selectSnapshot(TransactionState.getTransaction);
 
-    if(transaction === undefined) return false;
+    if(transaction === undefined || transaction.closed) return false;
 
-    var payment = new TaPayment({paid: amount});
+    var total = <TaTotal>transaction.objects.find(x => x instanceof TaTotal);
+
+    var payment = new TaPayment({paid: total.totalToPay});
 
     this.store.dispatch(new AddTaObj(payment));
 

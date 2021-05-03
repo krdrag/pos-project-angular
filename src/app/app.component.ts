@@ -36,15 +36,8 @@ export class AppComponent implements OnInit {
   }
 
   
-  pay(amountText: string): void {
-    var amount = Number(amountText);
-    if(Number.isNaN(amount)) 
-    {
-      console.log("Not a number!");
-      return;
-    }
-
-    var result = this.tsService.Pay(amount);
+  pay(): void {
+    var result = this.tsService.Pay();
 
     if(!result) console.log("Payment failed!");
   }
