@@ -27,7 +27,6 @@ export class AppComponent implements OnInit {
     this.store.dispatch(new SetWorkstation({id: workstation.id, storeId: workstation.storeId}));
 
     var wsData = this.store.selectSnapshot(WorkstationState.getWorkstation);
-    console.log(wsData);
   }
 
   scanBarcode(barcode: string): void {
