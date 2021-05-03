@@ -1,12 +1,21 @@
 <div class="left">
 
-    <input type="text" placeholder="workstation ID" #name>
-    <input type="text" placeholder="Store ID" #url>
-  
-    <button (click)="setWorkstation(name.value,url.value)">Set a workstation</button>
+    <input type="text" placeholder="Barcode" #barcode>
+ 
+    <button (click)="scanBarcode(barcode.value)">Scan barcode</button>
 
-    <div *ngIf="workstation$ | async; let workstation">
-      <span>Workstation: {{ workstation.id }}</span><br />
-      <span>Store: {{ workstation.storeId }}</span>
-    </div>
+
+
+
+    <div *ngIf="transaction$ | async; let transaction">
+
+        <p>Transaction started</p>
+        <p>{{transaction.startDate.toISOString()}}</p>
+
+
+        <p>Workstation: {{transaction.workstationID}} Store: {{transaction.storeID}}</p>
+        <p>Transaction: {{transaction.transactionID}}</p>
+      </div>
+
+
 </div>

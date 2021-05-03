@@ -1,5 +1,7 @@
-export class ScanBarcode {
-    static readonly type = '[TRANSACTION] SCAN BARCODE'
+import { Transaction } from "src/app/models/transaction.model";
 
-    constructor(public barcode: string) {}
+export class StartTransaction {
+    static readonly type = '[TRANSACTION] START TRANSACTION'
+
+    constructor(public payload: Transaction) {}
 }

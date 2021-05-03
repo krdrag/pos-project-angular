@@ -1,3 +1,4 @@
+import { TransactionState } from './stores/transaction/transaction.state';
 import { environment } from './../environments/environment.prod';
 import { WorkstationState } from './stores/workstation/workstation.state';
 import { NgModule } from '@angular/core';
@@ -13,7 +14,8 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     NgxsModule.forRoot([
-      WorkstationState
+      WorkstationState,
+      TransactionState
     ], { developmentMode: true }),
   ],
   providers: [],

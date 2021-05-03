@@ -1,4 +1,4 @@
-import { ScanBarcode } from './Transaction.actions';
+import { StartTransaction } from './transaction.actions';
 import { Action, Selector, State, StateContext } from '@ngxs/store';
 import { Injectable } from '@angular/core';
 import { Transaction } from 'src/app/models/transaction.model';
@@ -17,6 +17,15 @@ export class TransactionState {
     @Selector()
     static getTransaction(state: TransactionStateModel) {
         return state.transaction;
+    }
+
+    @Action(StartTransaction)
+    create({getState, patchState }: StateContext<TransactionStateModel>, 
+                     { payload }: StartTransaction) {
+        const state = getState();
+        patchState({
+            transaction: payload
+        })
     }
 
     // @Action(ScanBarcode)
