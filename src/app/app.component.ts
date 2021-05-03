@@ -35,4 +35,18 @@ export class AppComponent implements OnInit {
     if(!result) console.log("Unknown barcode");
   }
 
+  
+  pay(amountText: string): void {
+    var amount = Number(amountText);
+    if(Number.isNaN(amount)) 
+    {
+      console.log("Not a number!");
+      return;
+    }
+
+    var result = this.tsService.Pay(amount);
+
+    if(!result) console.log("Payment failed!");
+  }
+
 }

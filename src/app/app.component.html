@@ -4,7 +4,9 @@
  
     <button (click)="scanBarcode(barcode.value)">Scan barcode</button>
 
-
+    <input type="text" placeholder="Pay" #payment>
+ 
+    <button (click)="pay(payment.value)">Pay</button>
 
 
     <div *ngIf="transaction$ | async; let transaction">

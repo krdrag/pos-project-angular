@@ -1,5 +1,6 @@
+import { TaPayment } from './../models/TaObjects/taPayment.model';
 import { TaArticle } from './../models/TaObjects/taArticle.model';
-import { StartTransaction, AddTaObj, RemoveTotal, AddTotal } from './../stores/transaction/transaction.actions';
+import { StartTransaction, AddTaObj, RemoveTotal, AddTotal, CloseTransaction } from './../stores/transaction/transaction.actions';
 import { WorkstationState } from './../stores/workstation/workstation.state';
 import { TransactionState } from './../stores/transaction/transaction.state';
 import { ArticleService } from './article.service';
@@ -26,7 +27,7 @@ export class TransactionService {
     var transaction = this.store.selectSnapshot(TransactionState.getTransaction);
     
     // Start transaction if needed
-    if(transaction === undefined) {
+    if(transaction === undefined || transaction.closed) {
       this.store.dispatch(new StartTransaction(this.CreateTransaction()))
       transaction = this.store.selectSnapshot(TransactionState.getTransaction);
     }
@@ -39,14 +40,23 @@ export class TransactionService {
 
     this.store.dispatch(new AddTaObj(taObj));
     
-
     // Recalculate Total
     this.store.dispatch(new AddTotal());
 
-    transaction = this.store.selectSnapshot(TransactionState.getTransaction);
-    console.log(transaction)
+    return true;
+  }
 
-    //this.UpdateTotal(transaction);
+  Pay(amount: number): boolean{
+
+    var transaction = this.store.selectSnapshot(TransactionState.getTransaction);
+
+    if(transaction === undefined) return false;
+
+    var payment = new TaPayment({paid: amount});
+
+    this.store.dispatch(new AddTaObj(payment));
+
+    this.store.dispatch(new CloseTransaction());
 
     return true;
   }
@@ -62,7 +72,7 @@ export class TransactionService {
       objects: [],
       storeID: wsData.storeId,
       workstationID: wsData.id,
-      maxSeqNmbr: 0
+      closed: false
     }
   }
 
@@ -72,22 +82,4 @@ export class TransactionService {
       itemPrice: article.itemPrice
     });
   }
-
-  // private UpdateTotal(transaction: Transaction): Total{
-    
-  //   var article: TaArticle;
-  //   var value: number = 0;
-
-  //   transaction.objects.forEach(taObj => {
-  //     // if(taObj.type == 'TaArticle'){
-  //     //   article = <TaArticle>taObj;
-  //     //   console.log(article.itemPrice)
-  //     //   value += article.itemPrice;
-  //     // }
-  //   });
-
-  //   return {
-  //     totalToPay: value
-  //   }
-  // }
 }

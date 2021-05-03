@@ -7,4 +7,5 @@ export interface Transaction {
     objects: TaObject[];
     storeID: number;
     workstationID: number;
+    closed: boolean;
 }

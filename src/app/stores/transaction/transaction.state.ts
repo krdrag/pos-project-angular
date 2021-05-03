@@ -1,4 +1,4 @@
-import { StartTransaction, AddTaObj, RemoveTotal, AddTotal } from './transaction.actions';
+import { StartTransaction, AddTaObj, RemoveTotal, AddTotal, CloseTransaction } from './transaction.actions';
 import { Action, Selector, State, StateContext } from '@ngxs/store';
 import { Injectable } from '@angular/core';
 import { Transaction } from 'src/app/models/transaction.model';
@@ -31,6 +31,17 @@ export class TransactionState {
         })
     }
 
+    @Action(CloseTransaction)
+    close({getState, patchState }: StateContext<TransactionStateModel>) {
+        const state = getState();
+        patchState({
+            transaction: {
+                ...state.transaction,
+                closed: true
+            }
+        })
+    }
+
     @Action(AddTaObj)
     addTaObj({getState, patchState }: StateContext<TransactionStateModel>, 
                      { payload }: AddTaObj) {
@@ -50,7 +61,6 @@ export class TransactionState {
     removeTotal({getState, setState }: StateContext<TransactionStateModel>) {
         const state = getState();
         var curTotal = state.transaction.objects.find(x => IsTaTotal(x))
-        console.log(curTotal)
         if(curTotal !== undefined)
         {
             const filteredArray = state.transaction.objects.filter(x => !IsTaTotal(x));
