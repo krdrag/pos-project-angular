@@ -21,6 +21,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ArticlesTabComponent } from './components/tabs/articles-tab/articles-tab.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ArticleButtonComponent } from './components/tabs/article-button/article-button.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     PosComponent,
     NotFoundComponent,
     TabsContentComponent,
-    ArticlesTabComponent
+    ArticlesTabComponent,
+    ArticleButtonComponent
   ],
   imports: [
     BrowserModule,
