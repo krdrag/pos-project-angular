@@ -14,16 +14,20 @@ import { LoginComponent } from './components/login/login.component';
 import { PosComponent } from './components/pos/pos.component';
 import { FormsModule } from '@angular/forms';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { TabsContentComponent } from './components/tabs-content/tabs-content.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     PosComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    TabsContentComponent
   ],
   imports: [
     BrowserModule,
