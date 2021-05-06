@@ -1,12 +1,3 @@
 body {
-  background-image: linear-gradient(
-    135deg,
-    rgb(34, 34, 34) 0%,
-    rgb(67, 67, 67) 69%,
-    rgb(77, 77, 77) 89%
-  ) !important;
-  height: 100%;
-  margin: 0;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-color: rgb(29, 24, 24);
 }
