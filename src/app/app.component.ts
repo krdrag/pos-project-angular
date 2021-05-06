@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 import { Workstation } from './models/workstation.model';
 import { WorkstationService } from './services/workstation.service';
 import { Transaction } from './models/transaction.model';
+import { UserService } from './services/user.service';
 
 @Component({
   selector: 'app-root',
@@ -18,13 +19,19 @@ export class AppComponent implements OnInit {
 
   @Select(TransactionState.getTransaction) transaction$: Observable<Transaction>
 
-  constructor(private store: Store, private wsService: WorkstationService, private tsService: TransactionService){
+  constructor(private store: Store, 
+              private wsService: WorkstationService, 
+              private tsService: TransactionService,
+              private userService: UserService){
     
   }
 
   ngOnInit(): void {
     var workstation = this.wsService.getWorkstationData();
     this.store.dispatch(new SetWorkstation({id: workstation.id, storeId: workstation.storeId}));
+    
+    this.userService.CheckToken();
+ 
   }
 
   scanBarcode(barcode: string): void {
