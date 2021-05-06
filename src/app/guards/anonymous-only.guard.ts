@@ -18,11 +18,17 @@ export class AnonymousOnlyGuard implements CanActivate {
       return this.checkLogin(url);
   }
 
-  checkLogin(url: string): true|UrlTree {
+  checkLogin(url: string): boolean {
     if (!this.userService.IsLoggedIn()) { return true; }
 
+    //this.router.navigate(['404']);
+    //setTimeout(() => this.location.replaceState(state.url));
+
     // Redirect to the login page
-    return this.router.parseUrl('/pos');
+    //return this.router.parseUrl('/pos');
+
+    this.router.navigateByUrl('/pos', {replaceUrl: true});
+    return false;
   }
   
 }
