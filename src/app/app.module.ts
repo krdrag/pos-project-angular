@@ -18,7 +18,9 @@ import { TabsContentComponent } from './components/tabs-content/tabs-content.com
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ArticlesTabComponent } from './components/tabs/articles-tab/articles-tab.component';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -27,7 +29,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     LoginComponent,
     PosComponent,
     NotFoundComponent,
-    TabsContentComponent
+    TabsContentComponent,
+    ArticlesTabComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +47,8 @@ import { ReactiveFormsModule } from '@angular/forms';
       UserState
     ], { developmentMode: true }),
     NgbModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
