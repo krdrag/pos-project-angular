@@ -22,6 +22,7 @@ import { ArticlesTabComponent } from './components/tabs/articles-tab/articles-ta
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ArticleButtonComponent } from './components/tabs/article-button/article-button.component';
+import { VirtualReceiptComponent } from './components/virtual-receipt/virtual-receipt.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { ArticleButtonComponent } from './components/tabs/article-button/article
     NotFoundComponent,
     TabsContentComponent,
     ArticlesTabComponent,
-    ArticleButtonComponent
+    ArticleButtonComponent,
+    VirtualReceiptComponent
   ],
   imports: [
     BrowserModule,
