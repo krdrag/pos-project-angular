@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { TransactionService } from './../../../services/transaction.service';
+import { Component, Input, OnInit } from '@angular/core';
 import { faTshirt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -8,14 +9,16 @@ import { faTshirt } from '@fortawesome/free-solid-svg-icons';
 })
 export class ArticleButtonComponent implements OnInit {
 
+  @Input() articleID: string;
+
   faTshirt = faTshirt;
 
-  constructor() { }
+  constructor(private taServcie: TransactionService ) { }
 
   ngOnInit(): void {
   }
 
-  addSalt(){
-    console.log("Salty!");
+  AddItem(){
+    this.taServcie.ScanBarcode(this.articleID);
   }
 }
