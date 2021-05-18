@@ -13,13 +13,13 @@ export class ArticleService {
   constructor(private store: Store) { }
 
   CheckBarcode(barcode: string): boolean{
-    const article = Articles.find(h => h.itemID === barcode) as Article;
+    const article = Articles.find(h => h.itemID == barcode) as Article;
 
     return article !== undefined;
   }
 
   CreateTaArticle(barcode: string): boolean{
-    var article = Articles.find(h => h.itemID === barcode) as Article;
+    var article = Articles.find(h => h.itemID == barcode) as Article;
 
     var taObj = new TaArticle({
       itemID: article.itemID,
