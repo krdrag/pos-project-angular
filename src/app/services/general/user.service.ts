@@ -1,9 +1,9 @@
-import { UserState } from './../stores/user/user.state';
+import { UserState } from '../../stores/user/user.state';
 import { Injectable } from '@angular/core';
 import { Store } from '@ngxs/store';
-import { Users } from '../mock/users.mock';
-import { User } from '../models/user.model';
-import { Login, Logout } from '../stores/user/user.actions';
+import { Users } from '../../mock/users.mock';
+import { User } from '../../models/user.model';
+import { Login, Logout } from '../../stores/user/user.actions';
 import * as moment from 'moment';
 
 @Injectable({

@@ -1,4 +1,4 @@
-import { TransactionService } from './../../../services/transaction.service';
+import { TransactionService } from '../../../services/transaction/transaction.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { faTshirt } from '@fortawesome/free-solid-svg-icons';
 

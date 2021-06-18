@@ -1,6 +1,6 @@
 
 import { Injectable } from '@angular/core';
-import { Workstation } from '../models/workstation.model';
+import { Workstation } from '../../models/workstation.model';
 
 @Injectable({
   providedIn: 'root'
