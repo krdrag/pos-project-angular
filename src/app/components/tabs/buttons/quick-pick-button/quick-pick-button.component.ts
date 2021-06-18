@@ -1,3 +1,5 @@
+import { ArticleService } from './../../../../services/transaction/article.service';
+import { Article } from './../../../../models/article.model';
 import { TransactionService } from './../../../../services/transaction/transaction.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { faTshirt } from '@fortawesome/free-solid-svg-icons';
@@ -11,11 +13,16 @@ export class QuickPickButtonComponent implements OnInit {
 
   @Input() articleID: string;
 
+  article: Article;
+
   faTshirt = faTshirt;
 
-  constructor(private taServcie: TransactionService) { }
+  constructor(private taServcie: TransactionService, private artService: ArticleService) { }
 
   ngOnInit(): void {
+    if(this.articleID){
+      this.article = this.artService.GetArticle(this.articleID);
+    }
   }
 
   AddItem(){

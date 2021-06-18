@@ -1,4 +1,4 @@
-<div class="container button-background">
+<div *ngIf="article != undefined" class="container button-background">
     <div class="row">
         <div class="col d-flex justify-content-center col-icon" >
             <fa-icon [icon]="faTshirt" class="fa-4x"></fa-icon>
@@ -6,10 +6,10 @@
     </div>
     <div class="row">
         <div class="col">
-            Some plain t-shirt
+            {{article.name}}
         </div>
-        <div class="col">
-            17.99 EUR
+        <div class="col ">
+            {{article.price}} EUR
         </div>
     </div>
     <div class="row">
@@ -17,10 +17,10 @@
             Size:
         </div>
         <div class="col">
-            XXL
+            {{article.size}}
         </div>
     </div>
     <div class="row add-to-cart-btn">
-        <button type="button" class="btn btn-primary">Add do cart</button>
+        <button type="button" class="btn btn-primary" (click)="AddItem()">Add do cart</button>
     </div>
 </div>

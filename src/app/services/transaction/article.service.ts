@@ -13,20 +13,24 @@ export class ArticleService {
   constructor(private store: Store) { }
 
   CheckBarcode(barcode: string): boolean{
-    const article = Articles.find(h => h.itemID == barcode) as Article;
+    const article = Articles.find(h => h.ID == barcode) as Article;
 
     return article !== undefined;
   }
 
   CreateTaArticle(barcode: string): boolean{
-    var article = Articles.find(h => h.itemID == barcode) as Article;
+    var article = Articles.find(h => h.ID == barcode) as Article;
 
     var taObj = new TaArticle({
-      itemID: article.itemID,
-      itemPrice: article.itemPrice
+      ID: article.ID,
+      price: article.price
     });
 
     this.store.dispatch(new AddTaObj(taObj));
     return true;
+  }
+
+  GetArticle(barcode: string): Article {
+    return Articles.find(h => h.ID == barcode) as Article;
   }
 }

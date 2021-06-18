@@ -1,4 +1,6 @@
 export interface Article {
-    itemID: string;
-    itemPrice: number;
+    ID: string;
+    price: number;
+    name: string;
+    size: string;
 }

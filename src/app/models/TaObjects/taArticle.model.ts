@@ -2,16 +2,19 @@ import { Article } from "../article.model";
 import { TaObject } from "../taObject.model";
 
 export class TaArticle implements TaObject, Article {
-    itemID: string;
-    itemPrice: number;
+    ID: string;
+    name: string;
+    size: string;
+    price: number;
     
 
     public constructor(init?:Partial<TaArticle>) {
         Object.assign(this, init);
     }
     
+    
     GetVirtualReceiptLine(): string {
-        return `<span> Article: ${this.itemID} Price: ${this.itemPrice} </span>`
+        return `<span> Article: ${this.ID} Price: ${this.price} </span>`
     }
 
 }

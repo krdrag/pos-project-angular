@@ -85,7 +85,7 @@ export class TransactionState {
         state.transaction.objects.forEach(taObj => {
             if(IsTaArticle(taObj)){
                 article = <TaArticle>taObj;
-                value += article.itemPrice;
+                value += article.price;
             }
         });
 
