@@ -1,3 +1,4 @@
+import { TransactionService } from './../../services/transaction/transaction.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PosComponent implements OnInit {
 
-  constructor() { }
+  constructor(private taPayment: TransactionService) { }
 
   ngOnInit(): void {
+  }
+
+  Pay(){
+    this.taPayment.Pay();
   }
 
 }
