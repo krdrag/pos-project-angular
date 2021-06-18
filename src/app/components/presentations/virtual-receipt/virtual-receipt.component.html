@@ -1,11 +1,15 @@
-<div *ngIf="transaction$ | async; let transaction">
-    <p>Transaction started</p>
-    <p>{{transaction.startDate.toISOString()}}</p>
-
-    <li *ngFor="let taObj of transaction.objects; let i = index">
-        <div [innerHTML]="taObj.GetVirtualReceiptLine()"></div>
-    </li>
-
-    <p>Workstation: {{transaction.workstationID}} Store: {{transaction.storeID}}</p>
-    <p>Transaction: {{transaction.transactionID}}</p>
+<div class="container">
+    <div class="overflow-auto">
+        <div *ngIf="transaction$ | async; let transaction">
+            <p>Transaction started</p>
+            <p>{{transaction.startDate.toISOString()}}</p>
+        
+            <li *ngFor="let taObj of transaction.objects; let i = index">
+                <div [innerHTML]="taObj.GetVirtualReceiptLine()"></div>
+            </li>
+        
+            <p>Workstation: {{transaction.workstationID}} Store: {{transaction.storeID}}</p>
+            <p>Transaction: {{transaction.transactionID}}</p>
+        </div>
+    </div>
 </div>
