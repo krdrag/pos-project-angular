@@ -13,7 +13,7 @@ body {
   margin: 0 auto;
   background-color: rgb(42, 46, 56);
   border: 2px solid rgb(102, 128, 115);
-  outline: 2px solid #4caf50;
+  outline: 2px solid #444;
 }
 .form-signin .checkbox {
   font-weight: 400;
