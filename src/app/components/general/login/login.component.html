@@ -1,5 +1,5 @@
 <div class="container text-center">
-  <div class="form-signin bg-light rounded">
+  <div class="form-signin rounded">
     <img class="mb-4" src="assets/logo.png" alt="" width="250" height="250">
     <form [formGroup]="loginForm" novalidate (ngSubmit)="onSubmit()">
       <div class="form-group">
@@ -18,9 +18,9 @@
           Password is required.
         </div>
       </div>
-      <button class="btn btn-lg btn-primary btn-block" [disabled]="loginForm.status == 'INVALID'" type="submit">Sign in</button>
+      <button class="btn btn-lg btn-primary form-control" [disabled]="loginForm.status == 'INVALID'" type="submit">Sign in</button>
     </form>
-    <p>Form status: {{ loginForm.status }}</p>
+    <!--<p>Form status: {{ loginForm.status }}</p> -->
   </div>
   
 </div>

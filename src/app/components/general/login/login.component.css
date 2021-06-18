@@ -11,12 +11,9 @@ body {
   max-width: 330px;
   padding: 35px;
   margin: 0 auto;
-  background-image: linear-gradient(
-    135deg,
-    rgb(140, 140, 140) 0%,
-    rgb(160, 160, 160) 69%,
-    rgb(180, 180, 180) 89%
-  ) !important;
+  background-color: rgb(42, 46, 56);
+  border: 2px solid rgb(102, 128, 115);
+  outline: 2px solid #4caf50;
 }
 .form-signin .checkbox {
   font-weight: 400;
@@ -40,4 +37,7 @@ body {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+button:valid {
+  background-color: #4caf50;
 }
