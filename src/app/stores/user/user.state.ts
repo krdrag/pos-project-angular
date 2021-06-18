@@ -30,7 +30,7 @@ export class UserState {
     logout({getState, patchState }: StateContext<UserStateModel>) {
         const state = getState();
         patchState({
-            user: null
+            user: undefined
         })
     }
 

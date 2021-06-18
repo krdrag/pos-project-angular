@@ -23,6 +23,8 @@ import { ArticlesTabComponent } from './components/tabs/articles-tab/articles-ta
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ArticleButtonComponent } from './components/tabs/article-button/article-button.component';
 import { VirtualReceiptComponent } from './components/presentations/virtual-receipt/virtual-receipt.component';
+import { OperationsTabComponent } from './components/tabs/operations-tab/operations-tab.component';
+import { LogoutOperationComponent } from './components/tabs/operations/logout-operation/logout-operation.component';
 
 
 @NgModule({
@@ -34,7 +36,9 @@ import { VirtualReceiptComponent } from './components/presentations/virtual-rece
     TabsContentComponent,
     ArticlesTabComponent,
     ArticleButtonComponent,
-    VirtualReceiptComponent
+    VirtualReceiptComponent,
+    OperationsTabComponent,
+    LogoutOperationComponent
   ],
   imports: [
     BrowserModule,
