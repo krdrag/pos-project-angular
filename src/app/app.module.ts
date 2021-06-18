@@ -10,11 +10,11 @@ import { NgxsModule } from '@ngxs/store';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './components/login/login.component';
+import { LoginComponent } from './components/general/login/login.component';
 import { PosComponent } from './components/pos/pos.component';
 import { FormsModule } from '@angular/forms';
-import { NotFoundComponent } from './components/not-found/not-found.component';
-import { TabsContentComponent } from './components/tabs-content/tabs-content.component';
+import { NotFoundComponent } from './components/general/not-found/not-found.component';
+import { TabsContentComponent } from './components/tabs/tabs-content/tabs-content.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -22,7 +22,7 @@ import { ArticlesTabComponent } from './components/tabs/articles-tab/articles-ta
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ArticleButtonComponent } from './components/tabs/article-button/article-button.component';
-import { VirtualReceiptComponent } from './components/virtual-receipt/virtual-receipt.component';
+import { VirtualReceiptComponent } from './components/presentations/virtual-receipt/virtual-receipt.component';
 
 
 @NgModule({
