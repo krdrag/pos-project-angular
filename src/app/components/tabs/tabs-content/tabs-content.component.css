@@ -1,0 +1,18 @@
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  color: #fff;
+  background-color: rgb(42, 46, 56);
+  border-color: #444 #444 transparent;
+}
+
+.tab-content {
+  border-left: 1px solid #444;
+  border-right: 1px solid #444;
+  border-bottom: 1px solid #444;
+  background-color: rgb(42, 46, 56);
+  padding: 10px;
+}
+
+.nav-tabs {
+  margin-bottom: 0;
+}

@@ -1,3 +1,7 @@
+.navbar {
+  background-color: rgb(42, 46, 56);
+}
+
 .container-fluid {
   padding-right: 15px;
   padding-left: 0;
