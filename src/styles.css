@@ -20,3 +20,12 @@ body {
   margin-top: 15px;
   padding: 15px;
 }
+
+.btn-wide {
+  width: 200px;
+  height: 40px;
+}
+
+.no-padding {
+  padding: 0px;
+}

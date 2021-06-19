@@ -86,16 +86,21 @@ export class TransactionState {
         
         var article: TaArticle;
         var value: number = 0;
+        var quantity: number = 0;
 
         state.transaction.objects.forEach(taObj => {
             if(IsTaArticle(taObj)){
                 article = <TaArticle>taObj;
                 value += article.price;
+                // Rounding to 2 decimal places
+                value = Math.round((value + Number.EPSILON) * 100) / 100
+                quantity++;
             }
         });
 
         var taToal = new TaTotal({
-            totalToPay: value
+            totalToPay: value,
+            articleQuantity: quantity
         });
 
         patchState({

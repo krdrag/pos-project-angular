@@ -1,5 +1,15 @@
 <div *ngIf="total !== undefined">
     <div class="panel-bordered">
-        Total: {{total.totalToPay}}
+        <div class="row">
+            <div class="col">
+                <h5>{{total.articleQuantity}} articles</h5>
+            </div>
+            <div class="col ">
+                <h5>{{total.totalToPay}} EUR </h5>
+            </div>
+            <div class="col d-flex justify-content-end">
+                <button type="button" class="btn btn-success btn-wide no-padding" >Pay</button>
+            </div>
+        </div>
     </div>
 </div> 

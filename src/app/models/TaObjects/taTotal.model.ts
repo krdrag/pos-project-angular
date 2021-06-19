@@ -2,6 +2,7 @@ import { TaObject } from "../taObject.model";
 
 export class TaTotal implements TaObject {
     totalToPay: number;
+    articleQuantity: number;
 
     public constructor(init?:Partial<TaTotal>) {
         Object.assign(this, init);
