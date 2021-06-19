@@ -1,5 +1,11 @@
 <div class="container">
-    <div class="overflow-auto">
+
+    <h3>Shopping Cart</h3>
+
+    <div class="overflow-auto" id="scroll-style">
+        
+
+
         <div *ngIf="transaction$ | async; let transaction">
             <p>Transaction started</p>
             <p>{{transaction.startDate.toISOString()}}</p>
