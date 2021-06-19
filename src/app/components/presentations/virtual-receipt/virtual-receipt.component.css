@@ -14,10 +14,12 @@
   background-color: rgb(33, 39, 51);
   border: 2px solid rgb(102, 128, 115);
   outline: 2px solid #444;
+  padding: 10px;
 }
 
 #scroll-style::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   background-color: rgb(33, 39, 51);
 }
@@ -30,5 +32,24 @@
 #scroll-style::-webkit-scrollbar-thumb {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #444;
+}
+
+ul {
+  padding: 0px;
+}
+
+p {
+  padding: 0px;
+  margin: 0px;
+}
+
+.ta-article {
+  background-color: rgb(33, 39, 51);
+  border: 2px solid rgb(102, 128, 115);
+  outline: 2px solid #444;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 15px;
 }

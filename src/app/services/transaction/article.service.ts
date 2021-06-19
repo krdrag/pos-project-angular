@@ -23,7 +23,9 @@ export class ArticleService {
 
     var taObj = new TaArticle({
       ID: article.ID,
-      price: article.price
+      price: article.price,
+      name: article.name,
+      size: article.size
     });
 
     this.store.dispatch(new AddTaObj(taObj));

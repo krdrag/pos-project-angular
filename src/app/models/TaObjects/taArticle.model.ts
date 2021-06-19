@@ -14,7 +14,9 @@ export class TaArticle implements TaObject, Article {
     
     
     GetVirtualReceiptLine(): string {
-        return `<span> Article: ${this.ID} Price: ${this.price} </span>`
+        return `<span class='ta-article'> Article: ${this.ID} Price: ${this.price} </span>`
+
+
     }
 
 }

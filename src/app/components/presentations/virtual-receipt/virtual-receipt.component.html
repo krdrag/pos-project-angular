@@ -1,21 +1,38 @@
 <div class="container">
 
-    <h3>Shopping Cart</h3>
+    <h3>Virtual receipt</h3>
 
     <div class="overflow-auto" id="scroll-style">
         
-
-
         <div *ngIf="transaction$ | async; let transaction">
-            <p>Transaction started</p>
-            <p>{{transaction.startDate.toISOString()}}</p>
-        
-            <li *ngFor="let taObj of transaction.objects; let i = index">
-                <div [innerHTML]="taObj.GetVirtualReceiptLine()"></div>
-            </li>
-        
-            <p>Workstation: {{transaction.workstationID}} Store: {{transaction.storeID}}</p>
-            <p>Transaction: {{transaction.transactionID}}</p>
+
+            <ul *ngFor="let taObj of transaction.objects; let i = index">
+
+                <div *ngIf="IsTaArticle(taObj)">
+                    <div class="ta-article">
+
+                        <div class="row">
+                            <div class="col-7">
+                                {{taObj.name}}
+                            </div>
+                            <div class="col d-flex justify-content-end">
+                                <p class="text-right">{{taObj.price}} EUR</p>
+                            </div>
+                            <div class="col d-flex justify-content-end">
+                                <button type="button" class="remove btn btn-outline-danger">X</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div *ngIf="IsTaTotal(taObj)">
+                    Total
+                </div>
+
+            </ul>
+        <!-- <div [innerHTML]="taObj.GetVirtualReceiptLine()"></div> -->
+            
         </div>
     </div>
 </div>

@@ -22,6 +22,8 @@ export class QuickPickButtonComponent implements OnInit {
   ngOnInit(): void {
     if(this.articleID){
       this.article = this.artService.GetArticle(this.articleID);
+
+      if(this.article === undefined) console.error(`Article not found ${this.articleID}`);
     }
   }
 
