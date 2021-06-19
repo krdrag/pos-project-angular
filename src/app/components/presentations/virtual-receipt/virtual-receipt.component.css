@@ -3,7 +3,7 @@
   border-right: 1px solid #444;
   border-bottom: 1px solid #444;
   background-color: rgb(38, 44, 56);
-  height: 500px;
+  height: 570px;
   margin-top: 40px;
   padding-top: 15px;
 }
@@ -43,13 +43,4 @@ ul {
 p {
   padding: 0px;
   margin: 0px;
-}
-
-.ta-article {
-  background-color: rgb(33, 39, 51);
-  border: 2px solid rgb(102, 128, 115);
-  outline: 2px solid #444;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  padding: 15px;
 }

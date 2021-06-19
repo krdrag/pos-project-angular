@@ -22,6 +22,11 @@ export class TransactionState {
         return state.transaction;
     }
 
+    @Selector()
+    static getTotal(state: TransactionStateModel): TaTotal {
+        return state.transaction.objects.find(x => IsTaTotal(x)) as TaTotal
+    }
+
     @Action(StartTransaction)
     create({getState, patchState }: StateContext<TransactionStateModel>, 
                      { payload }: StartTransaction) {

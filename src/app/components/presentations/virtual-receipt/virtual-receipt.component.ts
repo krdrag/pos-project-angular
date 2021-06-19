@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Select } from '@ngxs/store';
+import { Select, Store } from '@ngxs/store';
 import { Observable } from 'rxjs';
 import { TaObject } from 'src/app/models/taObject.model';
 import { IsTaArticle } from 'src/app/models/TaObjects/taArticle.model';
-import { IsTaTotal } from 'src/app/models/TaObjects/taTotal.model';
+import { IsTaTotal, TaTotal } from 'src/app/models/TaObjects/taTotal.model';
 import { Transaction } from 'src/app/models/transaction.model';
 import { TransactionState } from 'src/app/stores/transaction/transaction.state';
 
@@ -16,7 +16,7 @@ export class VirtualReceiptComponent implements OnInit {
 
   @Select(TransactionState.getTransaction) transaction$: Observable<Transaction>
 
-  constructor() { }
+  constructor(private store: Store) { }
 
   ngOnInit(): void {
   }
@@ -27,6 +27,10 @@ export class VirtualReceiptComponent implements OnInit {
 
   IsTaTotal(taobj: TaObject): boolean {
     return IsTaTotal(taobj);
+  }
+
+  GetTotal(): TaTotal {
+    return this.store.selectSnapshot(TransactionState.getTotal);
   }
 
 }

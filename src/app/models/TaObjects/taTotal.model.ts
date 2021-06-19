@@ -6,10 +6,6 @@ export class TaTotal implements TaObject {
     public constructor(init?:Partial<TaTotal>) {
         Object.assign(this, init);
     }
-    
-    GetVirtualReceiptLine(): string {
-        return `<span> Total: ${this.totalToPay}</span>`
-    }
 
 }
 

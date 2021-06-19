@@ -11,14 +11,6 @@ export class TaArticle implements TaObject, Article {
     public constructor(init?:Partial<TaArticle>) {
         Object.assign(this, init);
     }
-    
-    
-    GetVirtualReceiptLine(): string {
-        return `<span class='ta-article'> Article: ${this.ID} Price: ${this.price} </span>`
-
-
-    }
-
 }
 
 export function IsTaArticle(taObj:TaObject): boolean{

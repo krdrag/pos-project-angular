@@ -1,11 +1,3 @@
-.button-background {
-  background-color: rgb(33, 39, 51);
-  border: 2px solid rgb(102, 128, 115);
-  outline: 2px solid #444;
-  padding: 15px;
-  margin: 5px;
-}
-
 .add-to-cart-btn {
   margin-top: 15px;
 }

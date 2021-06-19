@@ -6,11 +6,6 @@ export class TaPayment implements TaObject {
     public constructor(init?:Partial<TaPayment>) {
         Object.assign(this, init);
     }
-    
-    GetVirtualReceiptLine(): string {
-        return `<span> Paid: ${this.paid} EUR</span>`
-    }
-
 }
 
 export function IsTaPayment(taObj:TaObject): boolean{

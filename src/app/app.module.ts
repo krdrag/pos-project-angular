@@ -25,6 +25,8 @@ import { OperationsTabComponent } from './components/tabs/operations-tab/operati
 import { LogoutOperationComponent } from './components/tabs/operations/logout-operation/logout-operation.component';
 import { QuickPickTabComponent } from './components/tabs/quick-pick-tab/quick-pick-tab.component';
 import { QuickPickButtonComponent } from './components/tabs/buttons/quick-pick-button/quick-pick-button.component';
+import { ArticleVirtualReceiptComponent } from './components/presentations/article-virtual-receipt/article-virtual-receipt.component';
+import { TotalVirtualReceiptComponent } from './components/presentations/total-virtual-receipt/total-virtual-receipt.component';
 
 
 @NgModule({
@@ -39,6 +41,8 @@ import { QuickPickButtonComponent } from './components/tabs/buttons/quick-pick-b
     LogoutOperationComponent,
     QuickPickTabComponent,
     QuickPickButtonComponent,
+    ArticleVirtualReceiptComponent,
+    TotalVirtualReceiptComponent,
   ],
   imports: [
     BrowserModule,
