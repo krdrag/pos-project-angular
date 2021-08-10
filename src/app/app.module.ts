@@ -28,7 +28,6 @@ import { QuickPickButtonComponent } from './components/tabs/buttons/quick-pick-b
 import { ArticleVirtualReceiptComponent } from './components/presentations/article-virtual-receipt/article-virtual-receipt.component';
 import { TotalVirtualReceiptComponent } from './components/presentations/total-virtual-receipt/total-virtual-receipt.component';
 import { NavbarComponent } from './components/general/navbar/navbar.component';
-import { SidebarComponent } from './components/general/sidebar/sidebar.component';
 
 
 @NgModule({
@@ -45,8 +44,7 @@ import { SidebarComponent } from './components/general/sidebar/sidebar.component
     QuickPickButtonComponent,
     ArticleVirtualReceiptComponent,
     TotalVirtualReceiptComponent,
-    NavbarComponent,
-    SidebarComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
