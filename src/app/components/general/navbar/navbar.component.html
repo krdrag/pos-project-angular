@@ -3,7 +3,7 @@
     <input class="form-control me-2" type="Scan barcode" placeholder="Scan barcode" aria-label="Scan barcode" style="width: 800px;">
   </form>
   <span class="nav-link"></span>
-  <fa-icon [icon]="faGift" class="fa-2x status-icon"></fa-icon>
-  <fa-icon [icon]="faHdd" class="fa-2x status-icon"></fa-icon>
-  <fa-icon [icon]="faDatabase" class="fa-2x status-icon"></fa-icon>
+  <fa-icon [icon]="faGift" class="fa-2x status-icon" (click)="LoyaltyStatus()"></fa-icon>
+  <fa-icon [icon]="faHdd" class="fa-2x status-icon" (click)="DevicesStatus()"></fa-icon>
+  <fa-icon [icon]="faDatabase" class="fa-2x status-icon" (click)="StoreServerStatus()"></fa-icon>
 </nav>
