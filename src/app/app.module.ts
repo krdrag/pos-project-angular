@@ -2,7 +2,6 @@ import { AnonymousOnlyGuard } from './guards/anonymous-only.guard';
 import { UserState } from './stores/user/user.state';
 import { AuthGuard } from './guards/auth.guard';
 import { TransactionState } from './stores/transaction/transaction.state';
-import { environment } from './../environments/environment.prod';
 import { WorkstationState } from './stores/workstation/workstation.state';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -28,6 +27,10 @@ import { QuickPickButtonComponent } from './components/tabs/buttons/quick-pick-b
 import { ArticleVirtualReceiptComponent } from './components/presentations/article-virtual-receipt/article-virtual-receipt.component';
 import { TotalVirtualReceiptComponent } from './components/presentations/total-virtual-receipt/total-virtual-receipt.component';
 import { NavbarComponent } from './components/general/navbar/navbar.component';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { ToastrModule } from 'ngx-toastr';
 
 
 @NgModule({
@@ -62,7 +65,9 @@ import { NavbarComponent } from './components/general/navbar/navbar.component';
     ], { developmentMode: true }),
     NgbModule,
     ReactiveFormsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
