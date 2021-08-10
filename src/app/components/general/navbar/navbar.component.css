@@ -1,3 +1,9 @@
 .nav-pills {
   border: 1px solid #444;
 }
+
+.status-icon {
+  padding-left: 15px;
+  padding-right: 15px;
+  color: green;
+}
