@@ -3,6 +3,7 @@ import { Article } from './../../../../models/article.model';
 import { TransactionService } from './../../../../services/transaction/transaction.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { faTshirt } from '@fortawesome/free-solid-svg-icons';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-quick-pick-button',
@@ -17,7 +18,7 @@ export class QuickPickButtonComponent implements OnInit {
 
   faTshirt = faTshirt;
 
-  constructor(private taServcie: TransactionService, private artService: ArticleService) { }
+  constructor(private taServcie: TransactionService, private artService: ArticleService, private toastr: ToastrService) { }
 
   ngOnInit(): void {
     if(this.articleID){
@@ -28,6 +29,21 @@ export class QuickPickButtonComponent implements OnInit {
   }
 
   AddItem(){
-    this.taServcie.ScanBarcode(this.articleID);
+    var result = this.taServcie.ScanBarcode(this.articleID);
+
+    if(result)
+    {
+      this.toastr.success(`${this.article.name} scanned!`, "Success", {
+        positionClass: 'toast-top-center',
+        timeOut: 2000
+      });
+    }
+    else
+    {
+      this.toastr.error(`There was en error when scanning ${this.article.name}!`, "Failure", {
+        positionClass: 'toast-top-center',
+        timeOut: 2000
+      });
+    }
   }
 }
