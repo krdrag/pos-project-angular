@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "ghpages": "ng deploy --base-href=/pos-project-angular/"
   },
   "private": true,
   "dependencies": {
@@ -26,12 +27,14 @@
     "@fortawesome/free-regular-svg-icons": "^5.15.2",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
     "@ng-bootstrap/ng-bootstrap": "^9.1.0",
+    "@ngx-translate/core": "^13.0.0",
+    "@ngx-translate/http-loader": "^6.0.0",
     "@ngxs/store": "^3.7.1",
     "@types/uuid": "^8.3.0",
     "bootstrap": "^4.5.0",
     "moment": "^2.29.1",
     "ngx-toastr": "^14.1.0",
-    "rxjs": "~6.6.0",
+    "rxjs": "^6.6.7",
     "tslib": "^2.0.0",
     "uuid": "^8.3.2",
     "zone.js": "~0.11.3"

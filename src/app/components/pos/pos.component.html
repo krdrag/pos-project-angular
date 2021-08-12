@@ -7,31 +7,31 @@
     
     <ul ngbNav id="nav-navigation" #nav="ngbNav" class="nav nav-pills flex-column mb-auto">
       <li ngbNavItem>
-        <a class="nav-text" ngbNavLink>Cart</a>
+        <a class="nav-text" ngbNavLink>{{ 'sidebar.cart' | translate }}</a>
         <ng-template ngbNavContent>
           <app-virtual-receipt></app-virtual-receipt>
         </ng-template>
       </li>
       <li ngbNavItem>
-        <a class="nav-text" ngbNavLink>Quick pick</a>
+        <a class="nav-text" ngbNavLink>{{ 'sidebar.quick-pick' | translate }}</a>
         <ng-template ngbNavContent>
           <app-quick-pick-tab></app-quick-pick-tab>
         </ng-template>
       </li>
       <li ngbNavItem>
-        <a class="nav-text" ngbNavLink>Bags</a>
+        <a class="nav-text" ngbNavLink>{{ 'sidebar.bags' | translate }}</a>
         <ng-template ngbNavContent>
           <!--<app-articles-tab></app-articles-tab> -->
         </ng-template>
       </li>
       <li ngbNavItem>
-        <a class="nav-text" ngbNavLink>Accessories</a>
+        <a class="nav-text" ngbNavLink>{{ 'sidebar.accesories' | translate }}</a>
         <ng-template ngbNavContent>
           <!--<app-articles-tab></app-articles-tab> -->
         </ng-template>
       </li>
       <li ngbNavItem>
-        <a class="nav-text" ngbNavLink>Operations</a>
+        <a class="nav-text" ngbNavLink>{{ 'sidebar.operations' | translate }}</a>
         <ng-template ngbNavContent>
           <app-operations-tab></app-operations-tab>
         </ng-template>

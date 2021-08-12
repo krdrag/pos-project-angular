@@ -1,0 +1,18 @@
+{
+    "login": {
+        "cashierID_label" : "Cashier ID",
+        "password_label" : "Password",
+        "cashierID_required": "Cashier ID is required.",
+        "password_required": "Password is required.",
+        "login_button": "Sign in",
+        "login_failed_header": "Login failed!",
+        "login_failed_body": "Cashier ID or password incorrect!"
+    },
+    "sidebar": {
+        "cart": "Cart",
+        "quick-pick": "Quick pick",
+        "bags": "Bags",
+        "accesories": "Accessories",
+        "operations": "Operations"
+    }
+}

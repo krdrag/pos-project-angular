@@ -1,0 +1,18 @@
+{
+    "login": {
+        "cashierID_label" : "ID kasjera",
+        "password_label" : "Hasło",
+        "cashierID_required": "ID kasjera jest wymagane.",
+        "password_required": "Hasło jest wymagane.",
+        "login_button": "Zaloguj",
+        "login_failed_header": "Błąd!",
+        "login_failed_body": "ID kasjera albo hasło niepoprawne!"
+    },
+    "sidebar": {
+        "cart": "Koszyk",
+        "quick-pick": "Szybki wybór",
+        "bags": "Torby",
+        "accesories": "Akcesoria",
+        "operations": "Operacje"
+    }
+}

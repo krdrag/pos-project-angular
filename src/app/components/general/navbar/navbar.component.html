@@ -2,6 +2,8 @@
   <form class="d-flex">
     <input class="form-control me-2" type="Scan barcode" placeholder="Scan barcode" aria-label="Scan barcode" style="width: 800px;">
   </form>
+  <img class="flag" src="assets/flags/en.png" alt="" width="50" height="30" (click)="useLanguage('en')">
+  <img class="flag" src="assets/flags/pl.png" alt="" width="50" height="30" (click)="useLanguage('pl')">
   <span class="nav-link"></span>
   <fa-icon [icon]="faGift" class="fa-2x status-icon" (click)="LoyaltyStatus()"></fa-icon>
   <fa-icon [icon]="faHdd" class="fa-2x status-icon" (click)="DevicesStatus()"></fa-icon>

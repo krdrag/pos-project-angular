@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { faDatabase } from '@fortawesome/free-solid-svg-icons';
 import { faHdd } from '@fortawesome/free-solid-svg-icons';
 import { faGift } from '@fortawesome/free-solid-svg-icons';
+import {TranslateService} from '@ngx-translate/core';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
@@ -15,7 +16,8 @@ export class NavbarComponent implements OnInit {
   faHdd = faHdd;
   faGift = faGift;
 
-  constructor(private toastr: ToastrService) { }
+  constructor(private toastr: ToastrService,
+              private translate: TranslateService) { }
 
   ngOnInit(): void {
   }
@@ -37,6 +39,10 @@ export class NavbarComponent implements OnInit {
       positionClass: 'toast-top-center',
       timeOut: 2000
     });
+  }
+
+  useLanguage(language: string): void {
+    this.translate.use(language);
   }
 
 }
