@@ -1,0 +1,39 @@
+{
+    "general": {
+        "success": "Success",
+        "failure": "Failure"
+    },
+    "login": {
+        "cashierID_label" : "Cashier ID",
+        "password_label" : "Password",
+        "cashierID_required": "Cashier ID is required.",
+        "password_required": "Password is required.",
+        "login_button": "Sign in",
+        "login_failed_header": "Login failed!",
+        "login_failed_body": "Cashier ID or password incorrect!"
+    },
+    "scanning": {
+        "scanning-success": "Article scanned successfully",
+        "scanning-failed": "There was an error during scanning process."
+    },
+    "sidebar": {
+        "cart": "Cart",
+        "quick-pick": "Quick pick",
+        "bags": "Bags",
+        "accesories": "Accessories",
+        "operations": "Operations"
+    },
+    "navbar":{
+        "scan-barcode-placeholder": "Scan barcode"
+    },
+    "tabs":{
+        "size-label": "Size",
+        "add-to-cart-button": "Add to cart"
+    },
+    "services-status": {
+        "header": "Servcie status",
+        "loyalty-system-online": "Loyalty system is online!",
+        "devices-connected": "Devices are connected!",
+        "store-server-online": "Store server is reachable!"
+    }
+}

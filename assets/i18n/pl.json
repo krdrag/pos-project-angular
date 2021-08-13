@@ -1,0 +1,39 @@
+{
+    "general": {
+        "success": "Sukces",
+        "failure": "Niepowodzenie"
+    },
+    "login": {
+        "cashierID_label" : "ID kasjera",
+        "password_label" : "Hasło",
+        "cashierID_required": "ID kasjera jest wymagane.",
+        "password_required": "Hasło jest wymagane.",
+        "login_button": "Zaloguj",
+        "login_failed_header": "Błąd!",
+        "login_failed_body": "ID kasjera albo hasło niepoprawne!"
+    },
+    "scanning": {
+        "scanning-success": "Artykuł poprawnie zeskanowany",
+        "scanning-failed": "Wystąpił błąd podczas skanowania."
+    },
+    "sidebar": {
+        "cart": "Koszyk",
+        "quick-pick": "Szybki wybór",
+        "bags": "Torby",
+        "accesories": "Akcesoria",
+        "operations": "Operacje"
+    },
+    "navbar":{
+        "scan-barcode-placeholder": "Zeskanuj kod kreskowy"
+    },
+    "tabs":{
+        "size-label": "Rozmiar",
+        "add-to-cart-button": "Dodaj do koszyka"
+    },
+    "services-status": {
+        "header": "Status serwisów",
+        "loyalty-system-online": "System lojalnościowy jest dostępny!",
+        "devices-connected": "Urządzenia są podłączone!",
+        "store-server-online": "Serwer sklepu jest dostępny!"
+    }
+}
