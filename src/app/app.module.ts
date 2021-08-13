@@ -94,7 +94,7 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   }
   else
   {
-    return new TranslateHttpLoader(http, "pos-project-angular/assets/i18n/");
+    return new TranslateHttpLoader(http, "assets/i18n/");
   }
   
 }
