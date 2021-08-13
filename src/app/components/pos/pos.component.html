@@ -3,40 +3,41 @@
     <nav id="sidebarMenu" class="col-lg-2 d-md-block sidebar collapse">
       <div id="company-name" class="d-flex align-items-center justify-content-center">
         <img src="assets/logo_text.png" alt="" width="200px">
-    </div>
+      </div>
     
-    <ul ngbNav id="nav-navigation" #nav="ngbNav" class="nav nav-pills flex-column mb-auto">
-      <li ngbNavItem>
-        <a class="nav-text" ngbNavLink>Cart</a>
-        <ng-template ngbNavContent>
-          <app-virtual-receipt></app-virtual-receipt>
-        </ng-template>
-      </li>
-      <li ngbNavItem>
-        <a class="nav-text" ngbNavLink>Quick pick</a>
-        <ng-template ngbNavContent>
-          <app-quick-pick-tab></app-quick-pick-tab>
-        </ng-template>
-      </li>
-      <li ngbNavItem>
-        <a class="nav-text" ngbNavLink>Bags</a>
-        <ng-template ngbNavContent>
-          <!--<app-articles-tab></app-articles-tab> -->
-        </ng-template>
-      </li>
-      <li ngbNavItem>
-        <a class="nav-text" ngbNavLink>Accessories</a>
-        <ng-template ngbNavContent>
-          <!--<app-articles-tab></app-articles-tab> -->
-        </ng-template>
-      </li>
-      <li ngbNavItem>
-        <a class="nav-text" ngbNavLink>Operations</a>
-        <ng-template ngbNavContent>
-          <app-operations-tab></app-operations-tab>
-        </ng-template>
-      </li>
-  </ul>
+        <ul ngbNav id="nav-navigation" #nav="ngbNav" class="nav nav-pills flex-column mb-auto">
+          <li ngbNavItem>
+            <a class="nav-text" ngbNavLink>{{ 'sidebar.cart' | translate }}</a>
+            <ng-template ngbNavContent>
+              <app-virtual-receipt></app-virtual-receipt>
+            </ng-template>
+          </li>
+          <li ngbNavItem>
+            <a class="nav-text" ngbNavLink>{{ 'sidebar.quick-pick' | translate }}</a>
+            <ng-template ngbNavContent>
+              <app-quick-pick-tab></app-quick-pick-tab>
+            </ng-template>
+          </li>
+          <li ngbNavItem>
+            <a class="nav-text" ngbNavLink>{{ 'sidebar.bags' | translate }}</a>
+            <ng-template ngbNavContent>
+              <!--<app-articles-tab></app-articles-tab> -->
+            </ng-template>
+          </li>
+          <li ngbNavItem>
+            <a class="nav-text" ngbNavLink>{{ 'sidebar.accesories' | translate }}</a>
+            <ng-template ngbNavContent>
+              <!--<app-articles-tab></app-articles-tab> -->
+            </ng-template>
+          </li>
+          <li ngbNavItem>
+            <a class="nav-text" ngbNavLink>{{ 'sidebar.operations' | translate }}</a>
+            <ng-template ngbNavContent>
+              <app-operations-tab></app-operations-tab>
+            </ng-template>
+          </li>
+      </ul>
+
     </nav>
       <main class="col-lg-10">
         <div class="row">
@@ -46,5 +47,5 @@
           <div [ngbNavOutlet]="nav"></div>
         </div>
       </main>
-    </div>
   </div>
+</div>

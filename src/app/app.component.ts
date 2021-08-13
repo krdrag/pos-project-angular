@@ -9,6 +9,7 @@ import { Workstation } from './models/workstation.model';
 import { WorkstationService } from './services/general/workstation.service';
 import { Transaction } from './models/transaction.model';
 import { UserService } from './services/general/user.service';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -22,8 +23,10 @@ export class AppComponent implements OnInit {
   constructor(private store: Store, 
               private wsService: WorkstationService, 
               private tsService: TransactionService,
-              private userService: UserService){
+              private userService: UserService,
+              private translate: TranslateService){
     
+    translate.setDefaultLang('pl');
   }
 
   ngOnInit(): void {

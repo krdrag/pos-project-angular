@@ -3,54 +3,29 @@
     <img class="mb-4" src="assets/logo.png" alt="" width="250" height="250">
     <form [formGroup]="loginForm" novalidate (ngSubmit)="onSubmit()">
       <div class="form-group">
-          <input type="text" class="form-control" formControlName="cashierID" placeholder="Cashier ID" autofocus>
+          <input type="text" class="form-control" formControlName="cashierID" placeholder="{{ 'login.cashierID_label' | translate }}" autofocus>
       </div>
       <div *ngIf="loginForm.controls['cashierID'].invalid && (loginForm.controls['cashierID'].dirty || loginForm.controls['cashierID'].touched)" class="alert alert-danger">
         <div *ngIf="loginForm.controls['cashierID'].errors.required">
-          Cashier ID is required.
+          {{ 'login.cashierID_required' | translate }}
         </div>
       </div>
       <div class="form-group">
-        <input type="password" class="form-control" formControlName="password" placeholder="Password">
+        <input type="password" class="form-control" formControlName="password" placeholder="{{ 'login.password_label' | translate }}">
       </div>
       <div *ngIf="loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)" class="alert alert-danger">
         <div *ngIf="loginForm.controls['password'].errors.required">
-          Password is required.
+          {{ 'login.password_required' | translate }}
         </div>
       </div>
-      <button class="btn btn-lg btn-primary form-control" [disabled]="loginForm.status == 'INVALID'" type="submit">Sign in</button>
+      <button class="btn btn-lg btn-primary form-control" [disabled]="loginForm.status == 'INVALID'" type="submit">{{ 'login.login_button' | translate }}</button>
     </form>
     <!--<p>Form status: {{ loginForm.status }}</p> -->
+
+    <img class="flag" src="assets/flags/en.png" alt="" width="50" height="30" (click)="useLanguage('en')">
+    <img class="flag" src="assets/flags/pl.png" alt="" width="50" height="30" (click)="useLanguage('pl')">
+
   </div>
   
+  
 </div>
-
-
-
-
-<!--<div class="container text-center">
-  <form #userForm="ngForm" class="form-signin bg-light rounded" (ngSubmit)="onSubmit(userForm.form)">
-    <img class="mb-4" src="assets/logo.png" alt="" width="250" height="250">
-    <input type="text" id="inputCashierID" name = "cashierID" class="form-control" placeholder="Cashier ID" required autofocus ngModel>
-    <input type="password" id="inputPassword" name ="password" class="form-control" placeholder="Password" required ngModel>
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-  </form>
-</div>
-
-The whole content below can be removed with the new code.
-<div style="text-align:center">
-  <form [formGroup]="angForm" novalidate>
-        <div class="form-group">
-          <label class="center-block">Name:
-            <input class="form-control" formControlName="name">
-          </label>
-        </div>
-        <div *ngIf="angForm.controls['name'].invalid && (angForm.controls['name'].dirty || angForm.controls['name'].touched)" class="alert alert-danger">
-            <div *ngIf="angForm.controls['name'].errors.required">
-            Name is required.
-          </div>
-        </div>
-  </form>
-<p>Form value: {{ angForm.value | json }}</p>
-<p>Form status: {{ angForm.status | json }}</p>
-</div> -->
