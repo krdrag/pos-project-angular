@@ -1,0 +1,11 @@
+<nav class="nav nav-pills nav-fill">
+  <form class="d-flex">
+    <input class="form-control me-2" type="Scan barcode" placeholder="{{ 'navbar.scan-barcode-placeholder' | translate }}" style="width: 800px;">
+  </form>
+  <img class="flag" src="assets/flags/en.png" alt="" width="50" height="30" (click)="useLanguage('en')">
+  <img class="flag" src="assets/flags/pl.png" alt="" width="50" height="30" (click)="useLanguage('pl')">
+  <span class="nav-link"></span>
+  <fa-icon [icon]="faGift" class="fa-2x status-icon" (click)="LoyaltyStatus()"></fa-icon>
+  <fa-icon [icon]="faHdd" class="fa-2x status-icon" (click)="DevicesStatus()"></fa-icon>
+  <fa-icon [icon]="faDatabase" class="fa-2x status-icon" (click)="StoreServerStatus()"></fa-icon>
+</nav>

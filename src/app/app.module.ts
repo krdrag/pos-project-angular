@@ -2,7 +2,6 @@ import { AnonymousOnlyGuard } from './guards/anonymous-only.guard';
 import { UserState } from './stores/user/user.state';
 import { AuthGuard } from './guards/auth.guard';
 import { TransactionState } from './stores/transaction/transaction.state';
-import { environment } from './../environments/environment.prod';
 import { WorkstationState } from './stores/workstation/workstation.state';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -27,7 +26,15 @@ import { QuickPickTabComponent } from './components/tabs/quick-pick-tab/quick-pi
 import { QuickPickButtonComponent } from './components/tabs/buttons/quick-pick-button/quick-pick-button.component';
 import { ArticleVirtualReceiptComponent } from './components/presentations/article-virtual-receipt/article-virtual-receipt.component';
 import { TotalVirtualReceiptComponent } from './components/presentations/total-virtual-receipt/total-virtual-receipt.component';
+import { NavbarComponent } from './components/general/navbar/navbar.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { ToastrModule } from 'ngx-toastr';
+
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -43,6 +50,7 @@ import { TotalVirtualReceiptComponent } from './components/presentations/total-v
     QuickPickButtonComponent,
     ArticleVirtualReceiptComponent,
     TotalVirtualReceiptComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -58,11 +66,25 @@ import { TotalVirtualReceiptComponent } from './components/presentations/total-v
       TransactionState,
       UserState
     ], { developmentMode: true }),
-    NgbModule,
     ReactiveFormsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
+    HttpClientModule,
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: HttpLoaderFactory,
+                deps: [HttpClient]
+            }
+        }),
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
+  return new TranslateHttpLoader(http);
+}

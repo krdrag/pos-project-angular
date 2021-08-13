@@ -1,25 +1,16 @@
-.navbar {
-  background-color: rgb(38, 44, 56);
+#sidebarMenu {
+  height: 100vh;
+  background-color: rgb(42, 46, 56);
 }
 
-.container-fluid {
-  padding-right: 15px;
-  padding-left: 0;
+#company-name {
+  padding-top: 15px;
 }
 
-.fix-bottom {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+#nav-navigation {
+  padding-top: 25px;
 }
 
-.pay-button {
-  background-color: forestgreen;
-}
-
-h3 {
-  color: black;
-  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: black;
+.nav-text {
+  font-size: 20px;
 }

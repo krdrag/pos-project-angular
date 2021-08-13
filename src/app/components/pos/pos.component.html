@@ -1,18 +1,51 @@
-<nav class="navbar navbar-expand-md">
-    <img src="assets/logo_text.png" alt="" width="210" height="60">
-
-    <div class="collapse navbar-collapse">
-    </div>
-</nav>
-<main role="main" class="container-fluid">
-    <div class="row">
-        <div class="col-7">
-            <app-tabs-content></app-tabs-content>
-        </div>
-        <div class="col">
-            <app-virtual-receipt></app-virtual-receipt>
-        </div>
+<div class="container-fluid">
+  <div class="row">
+    <nav id="sidebarMenu" class="col-lg-2 d-md-block sidebar collapse">
+      <div id="company-name" class="d-flex align-items-center justify-content-center">
+        <img src="assets/logo_text.png" alt="" width="200px">
       </div>
-</main>
+    
+        <ul ngbNav id="nav-navigation" #nav="ngbNav" class="nav nav-pills flex-column mb-auto">
+          <li ngbNavItem>
+            <a class="nav-text" ngbNavLink>{{ 'sidebar.cart' | translate }}</a>
+            <ng-template ngbNavContent>
+              <app-virtual-receipt></app-virtual-receipt>
+            </ng-template>
+          </li>
+          <li ngbNavItem>
+            <a class="nav-text" ngbNavLink>{{ 'sidebar.quick-pick' | translate }}</a>
+            <ng-template ngbNavContent>
+              <app-quick-pick-tab></app-quick-pick-tab>
+            </ng-template>
+          </li>
+          <li ngbNavItem>
+            <a class="nav-text" ngbNavLink>{{ 'sidebar.bags' | translate }}</a>
+            <ng-template ngbNavContent>
+              <!--<app-articles-tab></app-articles-tab> -->
+            </ng-template>
+          </li>
+          <li ngbNavItem>
+            <a class="nav-text" ngbNavLink>{{ 'sidebar.accesories' | translate }}</a>
+            <ng-template ngbNavContent>
+              <!--<app-articles-tab></app-articles-tab> -->
+            </ng-template>
+          </li>
+          <li ngbNavItem>
+            <a class="nav-text" ngbNavLink>{{ 'sidebar.operations' | translate }}</a>
+            <ng-template ngbNavContent>
+              <app-operations-tab></app-operations-tab>
+            </ng-template>
+          </li>
+      </ul>
 
-
+    </nav>
+      <main class="col-lg-10">
+        <div class="row">
+          <app-navbar></app-navbar>
+        </div>
+        <div class="row">
+          <div [ngbNavOutlet]="nav"></div>
+        </div>
+      </main>
+  </div>
+</div>

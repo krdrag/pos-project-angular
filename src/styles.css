@@ -1,5 +1,11 @@
+html {
+  height: -webkit-fill-available;
+}
+
 body {
   background-color: rgb(33, 39, 51);
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
 }
 
 .noselect {

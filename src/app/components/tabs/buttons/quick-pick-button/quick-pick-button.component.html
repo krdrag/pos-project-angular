@@ -14,13 +14,13 @@
     </div>
     <div class="row">
         <div class="col">
-            Size:
+            {{ 'tabs.size-label' | translate }}
         </div>
         <div class="col">
             {{article.size}}
         </div>
     </div>
     <div class="row add-to-cart-btn">
-        <button type="button" class="btn btn-primary" (click)="AddItem()">Add do cart</button>
+        <button type="button" class="btn btn-primary" (click)="AddItem()">{{ 'tabs.add-to-cart-button' | translate }}</button>
     </div>
 </div>
