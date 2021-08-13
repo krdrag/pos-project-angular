@@ -1,0 +1,44 @@
+.sidebar-footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.sidebar-footer .operator-info .user-pic {
+  float: left;
+  padding: 5px;
+}
+
+.sidebar-footer .operator-info .user-pic img {
+  height: 60px;
+}
+
+.sidebar-footer .operator-info .row {
+  display: flex;
+}
+
+.sidebar-footer .operator-info .column {
+  flex: 50%;
+  padding: 5px;
+}
+
+.sidebar-footer .operator-info .user-info .user-status fa-icon {
+  font-size: 12px;
+  margin-right: 4px;
+  color: #0bf00b;
+}
+
+.sidebar-footer .store-id {
+  position: absolute;
+  text-align: left;
+}
+
+.sidebar-footer .workstation-id {
+  text-align: right;
+}
+
+.sidebar-footer .time {
+  text-align: center;
+}

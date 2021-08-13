@@ -37,6 +37,8 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 import { environment } from './../environments/environment';
+import { ClockComponent } from './components/utilities/clock/clock.component';
+import { SidebarFooterComponent } from './components/general/sidebar-footer/sidebar-footer.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +54,9 @@ import { environment } from './../environments/environment';
     QuickPickButtonComponent,
     ArticleVirtualReceiptComponent,
     TotalVirtualReceiptComponent,
-    NavbarComponent
+    NavbarComponent,
+    ClockComponent,
+    SidebarFooterComponent
   ],
   imports: [
     BrowserModule,

@@ -1,37 +1,29 @@
-html {
-  height: -webkit-fill-available;
-}
-
 body {
-  background-color: rgb(33, 39, 51);
+  background-color: #1e1e2e;
   min-height: 100vh;
   min-height: -webkit-fill-available;
 }
 
-.noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Old versions of Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
+main {
+  padding-left: 240px;
 }
 
-.panel-bordered {
-  background-color: rgb(33, 39, 51);
-  border: 2px solid rgb(102, 128, 115);
-  outline: 2px solid #444;
-
-  margin-top: 15px;
-  padding: 15px;
+/* Logo Size */
+.sidebar .logo img {
+  width: 170px;
 }
 
-.btn-wide {
-  width: 200px;
-  height: 40px;
+hr {
+  width: 80%;
+  margin: 0 auto;
 }
 
-.no-padding {
-  padding: 0px;
+/* Text */
+.nav-text {
+  font-size: 25px;
+}
+
+/* Colors */
+.bg-blue {
+  background: linear-gradient(0deg, #1d8cf8, #3358f4);
 }
