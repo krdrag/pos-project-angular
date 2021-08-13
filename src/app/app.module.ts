@@ -36,6 +36,8 @@ import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 
+import { environment } from './../environments/environment';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -65,7 +67,7 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
       WorkstationState,
       TransactionState,
       UserState
-    ], { developmentMode: true }),
+    ], { developmentMode: !environment.production }),
     ReactiveFormsModule,
     FontAwesomeModule,
     BrowserAnimationsModule,
@@ -86,5 +88,13 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 export class AppModule { }
 
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
-  return new TranslateHttpLoader(http);
+  if(!environment.production)
+  {
+    return new TranslateHttpLoader(http);
+  }
+  else
+  {
+    return new TranslateHttpLoader(http, "assets/i18n/");
+  }
+  
 }
