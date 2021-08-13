@@ -21,7 +21,9 @@
         "quick-pick": "Szybki wybór",
         "bags": "Torby",
         "accesories": "Akcesoria",
-        "operations": "Operacje"
+        "operations": "Operacje",
+        "store": "Sklep:",
+        "workstation": "POS:"
     },
     "navbar":{
         "scan-barcode-placeholder": "Zeskanuj kod kreskowy"

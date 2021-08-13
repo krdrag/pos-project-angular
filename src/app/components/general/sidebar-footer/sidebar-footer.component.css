@@ -6,6 +6,10 @@
   overflow: hidden;
 }
 
+.sidebar-footer .flag {
+  margin: 15px;
+}
+
 .sidebar-footer .operator-info .user-pic {
   float: left;
   padding: 5px;

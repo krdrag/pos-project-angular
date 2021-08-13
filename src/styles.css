@@ -1,5 +1,5 @@
 body {
-  background-color: #1e1e2e;
+  background-color: #1d1d2b;
   min-height: 100vh;
   min-height: -webkit-fill-available;
 }
@@ -26,4 +26,22 @@ hr {
 /* Colors */
 .bg-blue {
   background: linear-gradient(0deg, #1d8cf8, #3358f4);
+}
+
+/*.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  background-color: #27293d;
+}*/
+
+/* Events */
+
+.flag:hover {
+  -moz-box-shadow: 0 0 10px #ccc;
+  -webkit-box-shadow: 0 0 10px #ccc;
+  box-shadow: 0 0 10px #ccc;
+  opacity: 0.9;
+}
+
+.flag:active {
+  opacity: 0.5;
 }

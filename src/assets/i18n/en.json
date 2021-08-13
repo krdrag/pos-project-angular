@@ -21,7 +21,9 @@
         "quick-pick": "Quick pick",
         "bags": "Bags",
         "accesories": "Accessories",
-        "operations": "Operations"
+        "operations": "Operations",
+        "store": "Store:",
+        "workstation": "POS:"
     },
     "navbar":{
         "scan-barcode-placeholder": "Scan barcode"
