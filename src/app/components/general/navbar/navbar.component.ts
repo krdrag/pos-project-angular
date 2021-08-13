@@ -23,19 +23,29 @@ export class NavbarComponent implements OnInit {
   }
 
   LoyaltyStatus() {
-    this.showToast("Service status", "Loyalty system is online!");
+    
+    var msg = this.translate.instant("services-status.loyalty-system-online");
+
+    this.showToast(msg);
   }
 
   DevicesStatus() {
-    this.showToast("Service status", "Devices are connected!");
+    var msg = this.translate.instant("services-status.devices-connected");
+
+    this.showToast(msg);
   }
 
   StoreServerStatus() {
-    this.showToast("Service status", "Store server is reachable!");
+    var msg = this.translate.instant("services-status.store-server-online");
+
+    this.showToast(msg);
   }
 
-  showToast(title: string, message: string) {
-    this.toastr.success(message, title, {
+  showToast(message: string) {
+
+    var header = this.translate.instant("services-status.header");
+
+    this.toastr.success(message, header, {
       positionClass: 'toast-top-center',
       timeOut: 2000
     });
