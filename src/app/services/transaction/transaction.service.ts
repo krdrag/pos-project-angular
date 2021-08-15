@@ -7,6 +7,8 @@ import { Transaction } from '../../models/transaction.model';
 import { Injectable } from '@angular/core';
 import { Store } from '@ngxs/store';
 import { v4 as uuidv4 } from 'uuid';
+import { ToastrService } from 'ngx-toastr';
+import {TranslateService} from '@ngx-translate/core';
 
 @Injectable({
   providedIn: 'root'
@@ -15,14 +17,20 @@ export class TransactionService {
 
   constructor(private store: Store, 
               private articleService: ArticleService,
-              private paymentService: PaymentService) { }
+              private paymentService: PaymentService,
+              private translate: TranslateService,
+              private toastr: ToastrService) { }
 
   ScanBarcode(barcode: string): boolean {
 
     // Verify barcode
     var barcodeValid = this.articleService.CheckBarcode(barcode);
     
-    if(!barcodeValid) return false;
+    if(!barcodeValid) 
+    {
+      this.ShowToast(false, "general.failure", "scanning.invalid-barcode");
+      return false;
+    }
     
     var transaction = this.store.selectSnapshot(TransactionState.getTransaction);
     
@@ -40,6 +48,7 @@ export class TransactionService {
     // Recalculate Total
     this.store.dispatch(new AddTotal());
 
+    this.ShowToast(true, "general.success", "scanning.scanning-success");
     return true;
   }
 
@@ -68,6 +77,29 @@ export class TransactionService {
       storeID: wsData.storeId,
       workstationID: wsData.id,
       closed: false
+    }
+  }
+  
+  private ShowToast(success: boolean, headerID: string, bodyID: string)
+  {
+    var header, msg;
+
+    header = this.translate.instant(headerID);
+    msg = this.translate.instant(bodyID);
+
+    if(success)
+    {
+      this.toastr.success(msg, header, {
+        positionClass: 'toast-top-center',
+        timeOut: 2000
+      });
+    }
+    else
+    {
+      this.toastr.error(msg, header, {
+        positionClass: 'toast-top-center',
+        timeOut: 2000
+      });
     }
   }
 }

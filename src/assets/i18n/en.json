@@ -14,7 +14,7 @@
     },
     "scanning": {
         "scanning-success": "Article scanned successfully",
-        "scanning-failed": "There was an error during scanning process."
+        "invalid-barcode": "Invalid barcode!"
     },
     "sidebar": {
         "cart": "Cart",

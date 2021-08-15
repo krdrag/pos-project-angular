@@ -14,7 +14,7 @@
     },
     "scanning": {
         "scanning-success": "Artykuł poprawnie zeskanowany",
-        "scanning-failed": "Wystąpił błąd podczas skanowania."
+        "invalid-barcode": "Niepoprawny kod kreskowy!"
     },
     "sidebar": {
         "cart": "Koszyk",

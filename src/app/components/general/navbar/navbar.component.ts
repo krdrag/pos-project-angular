@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { faDatabase } from '@fortawesome/free-solid-svg-icons';
 import { faHdd } from '@fortawesome/free-solid-svg-icons';
 import { faGift } from '@fortawesome/free-solid-svg-icons';
+import { TransactionService } from './../../../services/transaction/transaction.service';
 import {TranslateService} from '@ngx-translate/core';
 import { ToastrService } from 'ngx-toastr';
 
@@ -16,10 +18,29 @@ export class NavbarComponent implements OnInit {
   faHdd = faHdd;
   faGift = faGift;
 
-  constructor(private toastr: ToastrService,
+  scanForm: FormGroup
+
+  constructor(private fb: FormBuilder,
+              private taServcie: TransactionService,
+              private toastr: ToastrService,
               private translate: TranslateService) { }
 
   ngOnInit(): void {
+    this.createForm();
+  }
+
+  createForm() {
+    this.scanForm = this.fb.group({
+      barcode: ['']
+    });
+  }
+
+  onSubmit() {
+    var barcode = this.scanForm.value.barcode;
+    var result = this.taServcie.ScanBarcode(barcode);
+
+    if(result)
+      this.scanForm.reset();
   }
 
   LoyaltyStatus() {

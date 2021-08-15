@@ -1,5 +1,5 @@
 <header>
-  <nav id="sidebarMenu" class="sidebar bg-blue">
+  <nav id="sidebarMenu" class="sidebar sidebar-bg">
     <div class="logo">
       <img src="assets/logo_text.png" alt="">
     </div>
@@ -43,6 +43,11 @@
 
 <main>
   <div class="container">
-    <div [ngbNavOutlet]="nav"></div>
+    <div class="row">
+      <app-navbar></app-navbar>
+    </div>
+    <div class="row">
+      <div [ngbNavOutlet]="nav"></div>
+    </div>
   </div>
 </main>

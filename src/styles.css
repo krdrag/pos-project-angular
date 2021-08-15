@@ -24,24 +24,49 @@ hr {
 }
 
 /* Colors */
-.bg-blue {
+.sidebar-bg {
   background: linear-gradient(0deg, #1d8cf8, #3358f4);
 }
 
-/*.nav-pills .nav-link.active,
-.nav-pills .show > .nav-link {
+.panel-bg {
   background-color: #27293d;
-}*/
+  border-radius: 15px;
+  box-shadow: 0 1px 20px 0 rgb(0 0 0 / 10%);
+}
+
+/* Elements */
+
+.input-base {
+  padding: 10px 18px;
+  background-color: transparent;
+  border-color: #3358f4;
+  transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
+  box-shadow: none;
+}
+
+.input-base:focus {
+  background-color: transparent;
+  color: rgb(238, 238, 238);
+}
 
 /* Events */
 
-.flag:hover {
+.interactive:hover {
   -moz-box-shadow: 0 0 10px #ccc;
   -webkit-box-shadow: 0 0 10px #ccc;
   box-shadow: 0 0 10px #ccc;
   opacity: 0.9;
 }
 
-.flag:active {
+.interactive:active {
+  opacity: 0.5;
+}
+
+.interactive-noborder:hover {
+  opacity: 0.9;
+}
+
+.interactive-noborder:active {
   opacity: 0.5;
 }
