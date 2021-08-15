@@ -1,6 +1,28 @@
-<div class="container">
+<div class="d-flex flex-row justify-content-between">
+    <div class="p-2 panel-cart panel-bg">
+        <!-- Virtual receipt -->
+        <div class="overflow-auto scroll-style">
+        
+            <div *ngIf="transaction$ | async; let transaction">
+    
+                <ul *ngFor="let taObj of transaction.objects; let i = index">
+                    <div *ngIf="IsTaArticle(taObj)">
+                        <app-article-virtual-receipt [article]="taObj"></app-article-virtual-receipt>
+                    </div>
+                </ul>
+    
+                
+            </div>
+        </div>
+    </div>
+    <div class="p-2 panel-total panel-bg">
+        <!-- Total-->
+    </div>
+</div>
 
-    <h3>Cart</h3>
+
+<!--
+<div class="container">
 
     <div class="overflow-auto" id="scroll-style">
         
@@ -17,4 +39,4 @@
     </div>
 
     <app-total-virtual-receipt [total]="GetTotal()"></app-total-virtual-receipt>
-</div>
+</div>-->

@@ -13,7 +13,6 @@ import { LoginComponent } from './components/general/login/login.component';
 import { PosComponent } from './components/pos/pos.component';
 import { FormsModule } from '@angular/forms';
 import { NotFoundComponent } from './components/general/not-found/not-found.component';
-import { TabsContentComponent } from './components/tabs/tabs-content/tabs-content.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -46,7 +45,6 @@ import { SidebarFooterComponent } from './components/general/sidebar-footer/side
     LoginComponent,
     PosComponent,
     NotFoundComponent,
-    TabsContentComponent,
     VirtualReceiptComponent,
     OperationsTabComponent,
     LogoutOperationComponent,
