@@ -3,6 +3,7 @@ import { Select, Store } from '@ngxs/store';
 import { Observable } from 'rxjs';
 import { TaObject } from 'src/app/models/taObject.model';
 import { IsTaArticle } from 'src/app/models/TaObjects/taArticle.model';
+import { IsTaFooter } from 'src/app/models/TaObjects/taFooter.model';
 import { IsTaTotal, TaTotal } from 'src/app/models/TaObjects/taTotal.model';
 import { Transaction } from 'src/app/models/transaction.model';
 import { TransactionState } from 'src/app/stores/transaction/transaction.state';
@@ -27,6 +28,10 @@ export class VirtualReceiptComponent implements OnInit {
 
   IsTaTotal(taobj: TaObject): boolean {
     return IsTaTotal(taobj);
+  }
+
+  IsTaFooter(taobj: TaObject): boolean {
+    return IsTaFooter(taobj);
   }
 
   GetTotal(): TaTotal {

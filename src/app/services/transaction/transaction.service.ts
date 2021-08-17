@@ -62,7 +62,17 @@ export class TransactionService {
 
     this.store.dispatch(new CloseTransaction());
 
+    this.ShowToast(true, "general.success", "total.payment-success");
+
     return true;
+  }
+
+  IsClosed(): boolean {
+    var transaction = this.store.selectSnapshot(TransactionState.getTransaction);
+
+    if(transaction == null) return true;
+
+    return transaction.closed;
   }
 
   private CreateTransaction(): Transaction {

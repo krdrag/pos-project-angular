@@ -28,6 +28,15 @@
     "navbar":{
         "scan-barcode-placeholder": "Scan barcode"
     },
+    "total": {
+        "articles-count": "Articles:",
+        "total-savings": "Total savings:",
+        "total": "Total",
+        "tax": "Tax",
+        "total-net": "Total Net:",
+        "payment-button": "Payment",
+        "payment-success": "Transaction finished successfully."
+    },
     "tabs":{
         "size-label": "Size",
         "add-to-cart-button": "Add to cart"

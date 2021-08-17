@@ -3,20 +3,19 @@
     <img class="interactive flag" src="assets/flags/pl.png" alt="" width="65" height="40" (click)="useLanguage('pl')">
     <hr>
     <div class="operator-info column">
-        <div class="user-pic row">
-            <img src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
-              alt="User picture" >
-          </div>
-          <div class="user-info row">
-            <span class="user-name ">{{user.operatorName}}
-              <strong>{{user.operatorLastName}}</strong>
-            </span>
-            <span class="user-role">{{user.role}}</span>
-            <span class="user-status">
-                <fa-icon [icon]="faCircle"></fa-icon>
-              <span>Online</span>
-            </span>
-          </div>
+        <div class="user-pic row" style="font-size: 0.7rem;">
+          <fa-icon class="fa-5x" [icon]="faUserAlt"></fa-icon>
+        </div>
+        <div class="user-info row">
+          <span class="user-name ">{{user.operatorName}}
+            <strong>{{user.operatorLastName}}</strong>
+          </span>
+          <span class="user-role">{{user.role}}</span>
+          <span class="user-status">
+              <fa-icon [icon]="faCircle"></fa-icon>
+            <span>Online</span>
+          </span>
+        </div>
     </div>
     <hr>
     <div>

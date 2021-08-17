@@ -12,11 +12,7 @@
 
 .sidebar-footer .operator-info .user-pic {
   float: left;
-  padding: 5px;
-}
-
-.sidebar-footer .operator-info .user-pic img {
-  height: 60px;
+  padding-left: 5px;
 }
 
 .sidebar-footer .operator-info .row {

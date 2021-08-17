@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faCircle } from '@fortawesome/free-solid-svg-icons';
+import { faCircle, faUserAlt } from '@fortawesome/free-solid-svg-icons';
 import { UserService } from 'src/app/services/general/user.service';
 import { WorkstationService } from 'src/app/services/general/workstation.service';
 import { User } from '../../../models/user.model';
@@ -13,6 +13,7 @@ import {TranslateService} from '@ngx-translate/core';
 export class SidebarFooterComponent implements OnInit {
 
   faCircle = faCircle;
+  faUserAlt= faUserAlt;
   user: User;
   workstation;
 

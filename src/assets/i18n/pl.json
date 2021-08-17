@@ -28,6 +28,15 @@
     "navbar":{
         "scan-barcode-placeholder": "Zeskanuj kod kreskowy"
     },
+    "total": {
+        "articles-count": "Artykuły:",
+        "total-savings": "Oszczędności:",
+        "total": "Łącznie:",
+        "tax": "Podatek",
+        "total-net": "Łącznie Netto:",
+        "payment-button": "Płatność",
+        "payment-success": "Transakcja zakończona z sukcesem."
+    },
     "tabs":{
         "size-label": "Rozmiar",
         "add-to-cart-button": "Dodaj do koszyka"
