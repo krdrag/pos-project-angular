@@ -13,7 +13,6 @@ import { LoginComponent } from './components/general/login/login.component';
 import { PosComponent } from './components/pos/pos.component';
 import { FormsModule } from '@angular/forms';
 import { NotFoundComponent } from './components/general/not-found/not-found.component';
-import { TabsContentComponent } from './components/tabs/tabs-content/tabs-content.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -27,6 +26,7 @@ import { QuickPickButtonComponent } from './components/tabs/buttons/quick-pick-b
 import { ArticleVirtualReceiptComponent } from './components/presentations/article-virtual-receipt/article-virtual-receipt.component';
 import { TotalVirtualReceiptComponent } from './components/presentations/total-virtual-receipt/total-virtual-receipt.component';
 import { NavbarComponent } from './components/general/navbar/navbar.component';
+import {PaymentModalComponent} from './components/modals/payment-modal/payment-modal-component'
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -37,6 +37,10 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 import { environment } from './../environments/environment';
+import { ClockComponent } from './components/utilities/clock/clock.component';
+import { SidebarFooterComponent } from './components/general/sidebar-footer/sidebar-footer.component';
+import { PaymentVirtualReceiptComponent } from './components/presentations/payment-virtual-receipt/payment-virtual-receipt.component';
+import { FooterVirtualReceiptComponent } from './components/presentations/footer-virtual-receipt/footer-virtual-receipt.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +48,6 @@ import { environment } from './../environments/environment';
     LoginComponent,
     PosComponent,
     NotFoundComponent,
-    TabsContentComponent,
     VirtualReceiptComponent,
     OperationsTabComponent,
     LogoutOperationComponent,
@@ -52,7 +55,12 @@ import { environment } from './../environments/environment';
     QuickPickButtonComponent,
     ArticleVirtualReceiptComponent,
     TotalVirtualReceiptComponent,
-    NavbarComponent
+    NavbarComponent,
+    ClockComponent,
+    SidebarFooterComponent,
+    PaymentModalComponent,
+    PaymentVirtualReceiptComponent,
+    FooterVirtualReceiptComponent
   ],
   imports: [
     BrowserModule,

@@ -2,11 +2,9 @@ import { StartTransaction, AddTaObj, RemoveTotal, AddTotal, CloseTransaction } f
 import { Action, Selector, State, StateContext } from '@ngxs/store';
 import { Injectable } from '@angular/core';
 import { Transaction } from 'src/app/models/transaction.model';
-import { patch, append, removeItem, insertItem, updateItem } from '@ngxs/store/operators';
-import {IsTaTotal, TaTotal} from "./../../models/TaObjects/taTotal.model"
-import { TaObject } from 'src/app/models/taObject.model';
+import { IsTaTotal, TaTotal} from "./../../models/TaObjects/taTotal.model"
 import { IsTaArticle, TaArticle } from 'src/app/models/TaObjects/taArticle.model';
-
+import { IsTaFooter, TaFooter } from 'src/app/models/TaObjects/taFooter.model';
 export class TransactionStateModel {
     transaction: Transaction;
 }
@@ -39,12 +37,19 @@ export class TransactionState {
     @Action(CloseTransaction)
     close({getState, patchState }: StateContext<TransactionStateModel>) {
         const state = getState();
+
+        var taFooter = new TaFooter();
+
         patchState({
             transaction: {
                 ...state.transaction,
-                closed: true
+                closed: true,
+                objects: [
+                    ...state.transaction.objects,
+                    taFooter
+                ]
             }
-        })
+        });
     }
 
     @Action(AddTaObj)
@@ -88,6 +93,8 @@ export class TransactionState {
         var value: number = 0;
         var quantity: number = 0;
 
+        var tax = 23;
+
         state.transaction.objects.forEach(taObj => {
             if(IsTaArticle(taObj)){
                 article = <TaArticle>taObj;
@@ -98,9 +105,18 @@ export class TransactionState {
             }
         });
 
+        // Simple net and tax calculation
+        var taxAmount = (tax * value)/100;
+        taxAmount = Math.round((taxAmount + Number.EPSILON) * 100) / 100
+
+        var totalNet = value - taxAmount;
+        totalNet = Math.round((totalNet + Number.EPSILON) * 100) / 100
+
         var taToal = new TaTotal({
             totalToPay: value,
-            articleQuantity: quantity
+            articleQuantity: quantity,
+            taxAmount: taxAmount,
+            totalNet: totalNet
         });
 
         patchState({

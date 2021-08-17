@@ -8,13 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PosComponent implements OnInit {
 
-  constructor(private taPayment: TransactionService) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
-
-  Pay(){
-    this.taPayment.Pay();
-  }
-
 }

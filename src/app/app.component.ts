@@ -22,11 +22,10 @@ export class AppComponent implements OnInit {
 
   constructor(private store: Store, 
               private wsService: WorkstationService, 
-              private tsService: TransactionService,
               private userService: UserService,
               private translate: TranslateService){
     
-    translate.setDefaultLang('pl');
+    this.translate.setDefaultLang('en');
   }
 
   ngOnInit(): void {
@@ -34,19 +33,6 @@ export class AppComponent implements OnInit {
     this.store.dispatch(new SetWorkstation({id: workstation.id, storeId: workstation.storeId}));
     
     this.userService.CheckToken();
- 
-  }
-
-  scanBarcode(barcode: string): void {
-    var result = this.tsService.ScanBarcode(barcode);
-    if(!result) console.log("Unknown barcode");
-  }
-
-  
-  pay(): void {
-    var result = this.tsService.Pay();
-
-    if(!result) console.log("Payment failed!");
   }
 
 }

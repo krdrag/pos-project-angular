@@ -1,7 +1,8 @@
 {
     "general": {
         "success": "Sukces",
-        "failure": "Niepowodzenie"
+        "failure": "Niepowodzenie",
+        "cancel": "Anuluj"
     },
     "login": {
         "cashierID_label" : "ID kasjera",
@@ -12,19 +13,41 @@
         "login_failed_header": "Błąd!",
         "login_failed_body": "ID kasjera albo hasło niepoprawne!"
     },
+    "transaction": {
+        "ta-closed": "Transakcja zakończona."
+    },
     "scanning": {
         "scanning-success": "Artykuł poprawnie zeskanowany",
-        "scanning-failed": "Wystąpił błąd podczas skanowania."
+        "invalid-barcode": "Niepoprawny kod kreskowy!"
     },
     "sidebar": {
         "cart": "Koszyk",
         "quick-pick": "Szybki wybór",
         "bags": "Torby",
         "accesories": "Akcesoria",
-        "operations": "Operacje"
+        "operations": "Operacje",
+        "store": "Sklep:",
+        "workstation": "POS:"
     },
     "navbar":{
         "scan-barcode-placeholder": "Zeskanuj kod kreskowy"
+    },
+    "total": {
+        "articles-count": "Artykuły:",
+        "total-savings": "Oszczędności:",
+        "total": "Łącznie:",
+        "tax": "Podatek",
+        "total-net": "Łącznie Netto:",
+        "payment-button": "Płatność",
+        "payment-success": "Transakcja zakończona z sukcesem."
+    },
+    "payment": {
+        "modal-message": "Wybierz metodę płatności:",
+        "payment-cash": "Gotówka",
+        "payment-credit-card": "Karta kredytowa",
+        "unknown-medium": "Nieznana metoda płatności",
+        "payment-method": "Metoda płatności:",
+        "paid": "Zapłacono:"
     },
     "tabs":{
         "size-label": "Rozmiar",

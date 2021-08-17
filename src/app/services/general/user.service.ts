@@ -21,9 +21,6 @@ export class UserService {
     const userID = window.localStorage.getItem('Cashier');
     const expiryDate = window.localStorage.getItem('ExpiryDate');
 
-    console.log(userID);
-    console.log(expiryDate);
-
     if(userID === undefined || userID === null) return false;
 
     if(moment() > moment(expiryDate, this.outputDateFormat))
@@ -41,7 +38,9 @@ export class UserService {
 
     var user: User = {
       cashierID: userData.cashierID,
-      role: userData.role
+      role: userData.role,
+      operatorName: userData.name,
+      operatorLastName: userData.lastName
     }
     this.store.dispatch(new Login(user));
 
@@ -49,7 +48,11 @@ export class UserService {
 
   }
 
-  IsLoggedIn(): boolean{
+  GetUser(): User {
+    return this.store.selectSnapshot(UserState.getUser);
+  }
+
+  IsLoggedIn(): boolean {
     var user = this.store.selectSnapshot(UserState.getUser);
 
     return user !== undefined;
@@ -64,7 +67,9 @@ export class UserService {
 
     var user: User = {
       cashierID: userData.cashierID,
-      role: userData.role
+      role: userData.role,
+      operatorName: userData.name,
+      operatorLastName: userData.lastName
     }
 
     this.store.dispatch(new Login(user));

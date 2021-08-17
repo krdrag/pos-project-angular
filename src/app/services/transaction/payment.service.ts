@@ -13,12 +13,13 @@ export class PaymentService {
 
   constructor(private store: Store) { }
 
-  CreateTaPayment(transaction: Transaction): boolean{
+  CreateTaPayment(transaction: Transaction, mediaType: number): boolean{
     
     var total = <TaTotal>transaction.objects.find(x => x instanceof TaTotal);
 
     var taObj = new TaPayment({
-      paid: total.totalToPay
+      paid: total.totalToPay,
+      mediaType: mediaType
     });
 
     this.store.dispatch(new AddTaObj(taObj));
