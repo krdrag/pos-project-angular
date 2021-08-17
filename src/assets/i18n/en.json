@@ -13,6 +13,9 @@
         "login_failed_header": "Login failed!",
         "login_failed_body": "Cashier ID or password incorrect!"
     },
+    "transaction": {
+        "ta-closed": "Transaction is closed."
+    },
     "scanning": {
         "scanning-success": "Article scanned successfully",
         "invalid-barcode": "Invalid barcode!"

@@ -11,7 +11,7 @@
                         <app-payment-virtual-receipt [payment]="taObj"></app-payment-virtual-receipt>
                     </div>
                     <div *ngIf="IsTaFooter(taObj)">
-                        Transaction closed!
+                        <app-footer-virtual-receipt></app-footer-virtual-receipt>
                     </div>
                 </ul>
             </div>

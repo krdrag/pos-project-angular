@@ -40,6 +40,7 @@ import { environment } from './../environments/environment';
 import { ClockComponent } from './components/utilities/clock/clock.component';
 import { SidebarFooterComponent } from './components/general/sidebar-footer/sidebar-footer.component';
 import { PaymentVirtualReceiptComponent } from './components/presentations/payment-virtual-receipt/payment-virtual-receipt.component';
+import { FooterVirtualReceiptComponent } from './components/presentations/footer-virtual-receipt/footer-virtual-receipt.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { PaymentVirtualReceiptComponent } from './components/presentations/payme
     ClockComponent,
     SidebarFooterComponent,
     PaymentModalComponent,
-    PaymentVirtualReceiptComponent
+    PaymentVirtualReceiptComponent,
+    FooterVirtualReceiptComponent
   ],
   imports: [
     BrowserModule,

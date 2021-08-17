@@ -13,6 +13,9 @@
         "login_failed_header": "Błąd!",
         "login_failed_body": "ID kasjera albo hasło niepoprawne!"
     },
+    "transaction": {
+        "ta-closed": "Transakcja zakończona."
+    },
     "scanning": {
         "scanning-success": "Artykuł poprawnie zeskanowany",
         "invalid-barcode": "Niepoprawny kod kreskowy!"
