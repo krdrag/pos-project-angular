@@ -4,6 +4,7 @@ import { ArticleService } from './article.service';
 import { WorkstationState } from '../../stores/workstation/workstation.state';
 import { TransactionState } from '../../stores/transaction/transaction.state';
 import { Transaction } from '../../models/transaction.model';
+import { MediaTypes } from '../../mock/media.mock';
 import { Injectable } from '@angular/core';
 import { Store } from '@ngxs/store';
 import { v4 as uuidv4 } from 'uuid';
@@ -52,13 +53,22 @@ export class TransactionService {
     return true;
   }
 
-  Pay(): boolean{
+  Pay(mediaType: number): boolean{
+
+    const media = MediaTypes.find(h => h.mediaID == mediaType);
+
+    if(media === undefined)
+    {
+      this.ShowToast(false, "general.failure", "payment.unknown-medium");
+      console.error(`Payment medium ${mediaType} does not exist`);
+      return;
+    }
 
     var transaction = this.store.selectSnapshot(TransactionState.getTransaction);
 
     if(transaction === undefined || transaction.closed) return false;
 
-    this.paymentService.CreateTaPayment(transaction);
+    this.paymentService.CreateTaPayment(transaction, mediaType);
 
     this.store.dispatch(new CloseTransaction());
 

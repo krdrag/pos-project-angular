@@ -26,6 +26,7 @@ import { QuickPickButtonComponent } from './components/tabs/buttons/quick-pick-b
 import { ArticleVirtualReceiptComponent } from './components/presentations/article-virtual-receipt/article-virtual-receipt.component';
 import { TotalVirtualReceiptComponent } from './components/presentations/total-virtual-receipt/total-virtual-receipt.component';
 import { NavbarComponent } from './components/general/navbar/navbar.component';
+import {PaymentModalComponent} from './components/modals/payment-modal/payment-modal-component'
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -38,6 +39,7 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { environment } from './../environments/environment';
 import { ClockComponent } from './components/utilities/clock/clock.component';
 import { SidebarFooterComponent } from './components/general/sidebar-footer/sidebar-footer.component';
+import { PaymentVirtualReceiptComponent } from './components/presentations/payment-virtual-receipt/payment-virtual-receipt.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +56,9 @@ import { SidebarFooterComponent } from './components/general/sidebar-footer/side
     TotalVirtualReceiptComponent,
     NavbarComponent,
     ClockComponent,
-    SidebarFooterComponent
+    SidebarFooterComponent,
+    PaymentModalComponent,
+    PaymentVirtualReceiptComponent
   ],
   imports: [
     BrowserModule,

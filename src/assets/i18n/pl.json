@@ -1,7 +1,8 @@
 {
     "general": {
         "success": "Sukces",
-        "failure": "Niepowodzenie"
+        "failure": "Niepowodzenie",
+        "cancel": "Anuluj"
     },
     "login": {
         "cashierID_label" : "ID kasjera",
@@ -36,6 +37,14 @@
         "total-net": "Łącznie Netto:",
         "payment-button": "Płatność",
         "payment-success": "Transakcja zakończona z sukcesem."
+    },
+    "payment": {
+        "modal-message": "Wybierz metodę płatności:",
+        "payment-cash": "Gotówka",
+        "payment-credit-card": "Karta kredytowa",
+        "unknown-medium": "Nieznana metoda płatności",
+        "payment-method": "Metoda płatności:",
+        "paid": "Zapłacono:"
     },
     "tabs":{
         "size-label": "Rozmiar",

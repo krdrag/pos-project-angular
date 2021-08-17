@@ -7,6 +7,9 @@
                     <div *ngIf="IsTaArticle(taObj)">
                         <app-article-virtual-receipt [article]="taObj"></app-article-virtual-receipt>
                     </div>
+                    <div *ngIf="IsTaPayment(taObj)">
+                        <app-payment-virtual-receipt [payment]="taObj"></app-payment-virtual-receipt>
+                    </div>
                     <div *ngIf="IsTaFooter(taObj)">
                         Transaction closed!
                     </div>

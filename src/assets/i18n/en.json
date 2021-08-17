@@ -1,7 +1,8 @@
 {
     "general": {
         "success": "Success",
-        "failure": "Failure"
+        "failure": "Failure",
+        "cancel": "Cancel"
     },
     "login": {
         "cashierID_label" : "Cashier ID",
@@ -31,11 +32,19 @@
     "total": {
         "articles-count": "Articles:",
         "total-savings": "Total savings:",
-        "total": "Total",
-        "tax": "Tax",
+        "total": "Total:",
+        "tax": "Tax:",
         "total-net": "Total Net:",
         "payment-button": "Payment",
         "payment-success": "Transaction finished successfully."
+    },
+    "payment": {
+        "modal-message": "Select payment method:",
+        "payment-cash": "Cash",
+        "payment-credit-card": "Credit card",
+        "unknown-medium":"Unknown payment medium!",
+        "payment-method": "Payment method:",
+        "paid": "Paid:"
     },
     "tabs":{
         "size-label": "Size",

@@ -1,0 +1,10 @@
+<div class="modal-header">
+    <h4 class="modal-title">{{'payment.modal-message' | translate}}</h4>
+  </div>
+  <div class="modal-body">
+    <button type="button" class="btn btn-primary btn-lg payment-btn" (click)="Pay(0)"><fa-icon [icon]="faMoneyBill"></fa-icon> {{'payment.payment-cash' | translate}}</button>
+    <button type="button" class="btn btn-primary btn-lg payment-btn" (click)="Pay(1)"><fa-icon [icon]="faCreditCard"></fa-icon> {{'payment.payment-credit-card' | translate}}</button>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-danger btn-lg" (click)="activeModal.close('Close click')">{{'general.cancel' | translate}}</button>
+</div>
