@@ -2,7 +2,7 @@
   <div class="d-flex justify-content-between bd-highlight mb-3">
     <div class="p-2 bd-highlight">
       <form [formGroup]="scanForm" class="d-flex barcode-scanning" (ngSubmit)="onSubmit()">
-        <input class="form-control me-2 input-base" type="text" formControlName="barcode" placeholder="{{ 'navbar.scan-barcode-placeholder' | translate }}" style="width: 600px;">
+        <input class="form-control me-2 input-base border-blue" type="text" formControlName="barcode" placeholder="{{ 'navbar.scan-barcode-placeholder' | translate }}" style="width: 600px;">
       </form>
     </div>
     <div class="p-2 bd-highlight" style="font-size: 1.2rem;">

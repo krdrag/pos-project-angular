@@ -54,12 +54,17 @@ hr {
   box-shadow: 0 1px 20px 0 rgb(0 0 0 / 10%);
 }
 
+.border-blue {
+  border-color: #3358f4;
+  border-style: solid;
+  border-width: 1px;
+}
+
 /* Elements */
 
 .input-base {
   padding: 10px 18px;
   background-color: transparent;
-  border-color: #3358f4;
   transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out,
     background-color 0.3s ease-in-out;
   box-shadow: none;
@@ -89,4 +94,14 @@ hr {
 
 .interactive-noborder:active {
   opacity: 0.5;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }

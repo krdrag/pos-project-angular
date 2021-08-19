@@ -6,7 +6,7 @@ export class TaArticle implements TaObject, Article {
     name: string;
     size: string;
     price: number;
-    
+    articleType: number;
 
     public constructor(init?:Partial<TaArticle>) {
         Object.assign(this, init);

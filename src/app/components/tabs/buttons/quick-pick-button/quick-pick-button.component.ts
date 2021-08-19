@@ -2,7 +2,7 @@ import { ArticleService } from './../../../../services/transaction/article.servi
 import { Article } from './../../../../models/article.model';
 import { TransactionService } from './../../../../services/transaction/transaction.service';
 import { Component, Input, OnInit } from '@angular/core';
-import { faTshirt } from '@fortawesome/free-solid-svg-icons';
+import { faTshirt, faMitten, faSocks, faHatCowboy, faTemperatureLow, faSkiing, faVolleyballBall, faSwimmer, faShoppingBag } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-quick-pick-button',
@@ -16,6 +16,14 @@ export class QuickPickButtonComponent implements OnInit {
   article: Article;
 
   faTshirt = faTshirt;
+  faMitten = faMitten;
+  faSocks = faSocks;
+  faHatCowboy = faHatCowboy;
+  faTemperatureLow = faTemperatureLow;
+  faSkiing = faSkiing;
+  faVolleyballBall = faVolleyballBall;
+  faSwimmer = faSwimmer;
+  faShoppingBag = faShoppingBag;
 
   constructor(private taServcie: TransactionService, 
     private artService: ArticleService) { }
@@ -30,5 +38,9 @@ export class QuickPickButtonComponent implements OnInit {
 
   AddItem(){
     this.taServcie.ScanBarcode(this.articleID);
+  }
+
+  GetArticleType(): number{
+    return this.article.articleType;
   }
 }
