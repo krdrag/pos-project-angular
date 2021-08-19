@@ -7,25 +7,37 @@
 
     <ul ngbNav #nav="ngbNav" class="nav-navigation nav-pills flex-column">
       <li ngbNavItem>
-        <a class="nav-text" ngbNavLink>{{ 'sidebar.cart' | translate }}</a>
+        <a class="nav-text" ngbNavLink>
+          <fa-icon [icon]="faShoppingCart"></fa-icon>
+          {{ 'sidebar.cart' | translate }}
+        </a>
         <ng-template ngbNavContent>
           <app-virtual-receipt></app-virtual-receipt>
         </ng-template>
       </li>
       <li ngbNavItem>
-        <a class="nav-text" ngbNavLink>{{ 'sidebar.quick-pick' | translate }}</a>
+        <a class="nav-text" ngbNavLink>
+          <fa-icon [icon]="faCartPlus"></fa-icon>
+          {{ 'sidebar.quick-pick' | translate }}
+        </a>
         <ng-template ngbNavContent>
           <app-quick-pick-tab></app-quick-pick-tab>
         </ng-template>
       </li>
       <li ngbNavItem>
-        <a class="nav-text" ngbNavLink>{{ 'sidebar.bags' | translate }}</a>
+        <a class="nav-text" ngbNavLink>
+          <fa-icon [icon]="faShoppingBag"></fa-icon>
+          {{ 'sidebar.bags' | translate }}
+        </a>
         <ng-template ngbNavContent>
           <app-bags-tab></app-bags-tab>
         </ng-template>
       </li>
       <li ngbNavItem>
-        <a class="nav-text" ngbNavLink>{{ 'sidebar.operations' | translate }}</a>
+        <a class="nav-text" ngbNavLink>
+          <fa-icon [icon]="faCog"></fa-icon>
+          {{ 'sidebar.operations' | translate }}
+        </a>
         <ng-template ngbNavContent>
           <app-operations-tab></app-operations-tab>
         </ng-template>

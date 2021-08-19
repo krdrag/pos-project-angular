@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { TaArticle } from 'src/app/models/TaObjects/taArticle.model';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-article-virtual-receipt',
@@ -10,7 +11,7 @@ export class ArticleVirtualReceiptComponent implements OnInit {
 
   @Input() article: TaArticle;
 
-  constructor() { }
+  constructor(private translate: TranslateService) { }
 
   ngOnInit(): void {
   }

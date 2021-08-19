@@ -43,12 +43,14 @@
     "payment": {
         "modal-message": "Wybierz metodę płatności:",
         "payment-cash": "Gotówka",
-        "payment-credit-card": "Karta kredytowa",
+        "payment-credit-card": "Karta płatnicza",
         "unknown-medium": "Nieznana metoda płatności",
         "payment-method": "Metoda płatności:",
         "paid": "Zapłacono:"
     },
     "tabs":{
+        "article-label":"Przedmiot",
+        "price-label": "Cena",
         "size-label": "Rozmiar",
         "add-to-cart-button": "Dodaj do koszyka"
     },

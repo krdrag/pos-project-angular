@@ -49,6 +49,8 @@
         "paid": "Paid:"
     },
     "tabs":{
+        "article-label":"Article",
+        "price-label": "Price",
         "size-label": "Size",
         "add-to-cart-button": "Add to cart"
     },
