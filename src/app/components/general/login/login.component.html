@@ -1,9 +1,9 @@
 <div class="container text-center">
-  <div class="form-signin rounded">
+  <div class="form-signin rounded border-blue panel-bg">
     <img class="mb-4" src="assets/logo.png" alt="" width="250" height="250">
     <form [formGroup]="loginForm" novalidate (ngSubmit)="onSubmit()">
       <div class="form-group">
-          <input type="text" class="form-control" formControlName="cashierID" placeholder="{{ 'login.cashierID_label' | translate }}">
+          <input type="text" class="form-control input-base border-blue" formControlName="cashierID" placeholder="{{ 'login.cashierID_label' | translate }}">
       </div>
       <div *ngIf="loginForm.controls['cashierID'].invalid && (loginForm.controls['cashierID'].dirty || loginForm.controls['cashierID'].touched)" class="alert alert-danger">
         <div *ngIf="loginForm.controls['cashierID'].errors.required">
@@ -11,7 +11,7 @@
         </div>
       </div>
       <div class="form-group">
-        <input type="password" class="form-control" formControlName="password" placeholder="{{ 'login.password_label' | translate }}">
+        <input type="password" class="form-control input-base border-blue" formControlName="password" placeholder="{{ 'login.password_label' | translate }}">
       </div>
       <div *ngIf="loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)" class="alert alert-danger">
         <div *ngIf="loginForm.controls['password'].errors.required">

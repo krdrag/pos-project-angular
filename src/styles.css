@@ -55,9 +55,7 @@ hr {
 }
 
 .border-blue {
-  border-color: #3358f4;
-  border-style: solid;
-  border-width: 1px;
+  outline: 2px solid #3358f4;
 }
 
 /* Elements */
@@ -68,6 +66,7 @@ hr {
   transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out,
     background-color 0.3s ease-in-out;
   box-shadow: none;
+  color: rgb(238, 238, 238);
 }
 
 .input-base:focus {
