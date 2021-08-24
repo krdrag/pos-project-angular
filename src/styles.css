@@ -104,3 +104,6 @@ hr {
   user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
+
+/* Cursor */
+.pointer {cursor: pointer;}
