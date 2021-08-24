@@ -14,7 +14,8 @@
         "login_failed_body": "ID kasjera albo hasło niepoprawne!"
     },
     "transaction": {
-        "ta-closed": "Transakcja zakończona."
+        "ta-closed": "Transakcja zakończona.",
+        "edit-line": "Edytuj"
     },
     "scanning": {
         "scanning-success": "Artykuł poprawnie zeskanowany",

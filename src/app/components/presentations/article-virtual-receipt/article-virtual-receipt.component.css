@@ -2,3 +2,8 @@
   margin-top: 3px;
   margin-bottom: 3px;
 }
+
+.ta-article .btn {
+  min-width: 200px;
+  margin-bottom: 15px;
+}

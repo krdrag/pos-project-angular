@@ -14,7 +14,8 @@
         "login_failed_body": "Cashier ID or password incorrect!"
     },
     "transaction": {
-        "ta-closed": "Transaction is closed."
+        "ta-closed": "Transaction is closed.",
+        "edit-line": "Edit"
     },
     "scanning": {
         "scanning-success": "Article scanned successfully",
