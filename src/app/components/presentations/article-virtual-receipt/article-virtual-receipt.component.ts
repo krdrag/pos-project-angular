@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { TaArticle } from 'src/app/models/TaObjects/taArticle.model';
 import { ArticleService } from '../../../services/transaction/article.service'
+import { ToastrService } from 'ngx-toastr';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -15,6 +16,7 @@ export class ArticleVirtualReceiptComponent implements OnInit {
   editVisible: boolean = false;
 
   constructor( private artService: ArticleService, 
+               private toastr: ToastrService,
                private translate: TranslateService) { }
 
   ngOnInit(): void {
@@ -30,7 +32,23 @@ export class ArticleVirtualReceiptComponent implements OnInit {
   }
 
   remove(){
-    this.artService.VoidArticle(this.article);
+    var result = this.artService.VoidArticle(this.article);
+
+    if(result)
+    {
+      this.showToast("transaction.transaction-operations.article-voided");
+    }
+  }
+
+  showToast(message: string) {
+
+    var header = this.translate.instant("transaction.transaction-operations.header");
+    var msg = this.translate.instant(message);
+
+    this.toastr.success(msg, header, {
+      positionClass: 'toast-top-center',
+      timeOut: 2000
+    });
   }
 
 }

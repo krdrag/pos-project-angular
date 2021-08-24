@@ -15,7 +15,12 @@
     },
     "transaction": {
         "ta-closed": "Transaction is closed.",
-        "edit-line": "Edit"
+        "edit-line": "Edit",
+        "transaction-operations": {
+            "header": "Transaction",
+            "general-error": "General error",
+            "article-voided": "Article was voided."
+        }
     },
     "scanning": {
         "scanning-success": "Article scanned successfully",

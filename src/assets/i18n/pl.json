@@ -15,7 +15,12 @@
     },
     "transaction": {
         "ta-closed": "Transakcja zakończona.",
-        "edit-line": "Edytuj"
+        "edit-line": "Edytuj",
+        "transaction-operations": {
+            "header": "Transakcja",
+            "general-error": "Błąd ogólny",
+            "article-voided": "Artykuł został usunięty."
+        }
     },
     "scanning": {
         "scanning-success": "Artykuł poprawnie zeskanowany",

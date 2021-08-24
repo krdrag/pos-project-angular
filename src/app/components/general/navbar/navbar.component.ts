@@ -4,7 +4,7 @@ import { faDatabase } from '@fortawesome/free-solid-svg-icons';
 import { faHdd } from '@fortawesome/free-solid-svg-icons';
 import { faGift } from '@fortawesome/free-solid-svg-icons';
 import { TransactionService } from './../../../services/transaction/transaction.service';
-import {TranslateService} from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
