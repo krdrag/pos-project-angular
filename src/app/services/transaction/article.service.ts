@@ -3,7 +3,7 @@ import { Article } from '../../models/article.model';
 import { Injectable } from '@angular/core';
 import { TaArticle } from '../../models/TaObjects/taArticle.model';
 import { Store } from '@ngxs/store';
-import { AddTaObj } from '../../stores/transaction/transaction.actions';
+import { AddTaObj, AddTotal, RemoveTotal, VoidTaObj } from '../../stores/transaction/transaction.actions';
 
 @Injectable({
   providedIn: 'root'
@@ -30,6 +30,20 @@ export class ArticleService {
 
     this.store.dispatch(new AddTaObj(taObj));
     return true;
+  }
+
+  VoidArticle(article: TaArticle): boolean {
+    this.store.dispatch(new RemoveTotal());
+
+    this.store.dispatch(new VoidTaObj(article));
+
+    this.store.dispatch(new AddTotal());
+
+    return true;
+  }
+
+  EditArticle(something: any) {
+    
   }
 
   GetArticle(barcode: string): Article {

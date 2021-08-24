@@ -40,4 +40,4 @@
     </div>
 </div>
 
-<button type="button" class="btn btn-success btn-lg btn-block btn-payment" [disabled]="total === undefined || IsClosed()" (click)="Payment()">{{ 'total.payment-button' | translate }}</button>
+<button type="button" class="btn btn-success btn-lg btn-block btn-payment" [disabled]="total === undefined || !IsValid()" (click)="Payment()">{{ 'total.payment-button' | translate }}</button>

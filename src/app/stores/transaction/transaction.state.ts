@@ -1,10 +1,10 @@
-import { StartTransaction, AddTaObj, RemoveTotal, AddTotal, CloseTransaction } from './transaction.actions';
+import { StartTransaction, AddTaObj, RemoveTotal, AddTotal, CloseTransaction, VoidTaObj } from './transaction.actions';
 import { Action, Selector, State, StateContext } from '@ngxs/store';
 import { Injectable } from '@angular/core';
 import { Transaction } from 'src/app/models/transaction.model';
 import { IsTaTotal, TaTotal} from "./../../models/TaObjects/taTotal.model"
 import { IsTaArticle, TaArticle } from 'src/app/models/TaObjects/taArticle.model';
-import { IsTaFooter, TaFooter } from 'src/app/models/TaObjects/taFooter.model';
+import { TaFooter } from 'src/app/models/TaObjects/taFooter.model';
 export class TransactionStateModel {
     transaction: Transaction;
 }
@@ -65,6 +65,22 @@ export class TransactionState {
                 ]
             }
         });
+    }
+
+    @Action(VoidTaObj)
+    voidTaObj({getState, setState }: StateContext<TransactionStateModel>, 
+                     { payload }: AddTaObj) {
+        const state = getState();
+
+        const filteredArray = state.transaction.objects.filter(x => x != payload);
+
+        setState({
+            ...state,
+            transaction: {
+                ...state.transaction,
+                objects: filteredArray
+            }},
+        );
     }
 
     @Action(RemoveTotal)

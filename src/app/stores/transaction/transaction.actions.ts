@@ -13,6 +13,12 @@ export class AddTaObj {
     constructor(public payload: TaObject) {}
 }
 
+export class VoidTaObj {
+    static readonly type = '[TRANSACTION] VOID TAOBJ'
+
+    constructor(public payload: TaObject) {}
+}
+
 export class RemoveTotal{
     static readonly type = '[TRANSACTION] REMOVE TOTAL'
 

@@ -25,8 +25,8 @@ export class TotalVirtualReceiptComponent implements OnInit {
     this.modalService.open(PaymentModalComponent, { centered: true });
   }
 
-  IsClosed(){
-    return this.taService.IsClosed();
+  IsValid(){
+    return this.total.articleQuantity != 0 && !this.taService.IsClosed();
   }
 
 }
