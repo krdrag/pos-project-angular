@@ -54,6 +54,21 @@
         "size-label": "Rozmiar",
         "add-to-cart-button": "Dodaj do koszyka"
     },
+    "operations": {
+        "ta-utilities": "Narzędzia transakcji",
+        "system-utilities": "System",
+        "device-utilities": "Test urządzeń",
+        "abort-ta": "Przerij transakcję",
+        "return-article": "Zwrot",
+        "void-receipt": "Anuluj rachunek",
+        "correction-receipt":"Korekta",
+        "break": "Przerwa",
+        "sign-off": "Wyloguj",
+        "day-end": "Zamknij dzień",
+        "test-eft": "Terminal EFT",
+        "test-printer": "Drukarka",
+        "test-drawer": "Szuflada"
+    },
     "services-status": {
         "header": "Status serwisów",
         "loyalty-system-online": "System lojalnościowy jest dostępny!",

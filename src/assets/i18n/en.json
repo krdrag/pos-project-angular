@@ -54,6 +54,21 @@
         "size-label": "Size",
         "add-to-cart-button": "Add to cart"
     },
+    "operations": {
+        "ta-utilities": "Transaction utilities",
+        "system-utilities": "System",
+        "device-utilities": "Devices",
+        "abort-ta": "Abort Transaction",
+        "return-article": "Return",
+        "void-receipt": "Void Receipt",
+        "correction-receipt":"Correction",
+        "break": "Break",
+        "sign-off": "Sign Off",
+        "day-end": "Day End",
+        "test-eft": "Test EFT",
+        "test-printer": "Test Printer",
+        "test-drawer": "Test Drawer"
+    },
     "services-status": {
         "header": "Servcie status",
         "loyalty-system-online": "Loyalty system is online!",

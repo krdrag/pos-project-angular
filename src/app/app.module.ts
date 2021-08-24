@@ -20,7 +20,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { VirtualReceiptComponent } from './components/presentations/virtual-receipt/virtual-receipt.component';
 import { OperationsTabComponent } from './components/tabs/operations-tab/operations-tab.component';
-import { LogoutOperationComponent } from './components/tabs/operations/logout-operation/logout-operation.component';
 import { QuickPickTabComponent } from './components/tabs/quick-pick-tab/quick-pick-tab.component';
 import { QuickPickButtonComponent } from './components/tabs/buttons/quick-pick-button/quick-pick-button.component';
 import { ArticleVirtualReceiptComponent } from './components/presentations/article-virtual-receipt/article-virtual-receipt.component';
@@ -51,7 +50,6 @@ import { BagsTabComponent } from './components/tabs/bags-tab/bags-tab.component'
     NotFoundComponent,
     VirtualReceiptComponent,
     OperationsTabComponent,
-    LogoutOperationComponent,
     QuickPickTabComponent,
     QuickPickButtonComponent,
     ArticleVirtualReceiptComponent,
