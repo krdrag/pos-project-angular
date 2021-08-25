@@ -1,7 +1,10 @@
+import { Article } from './../../../models/article.model';
 import { Component, Input, OnInit } from '@angular/core';
 import { TaArticle } from 'src/app/models/TaObjects/taArticle.model';
 import { ArticleService } from '../../../services/transaction/article.service'
+import { EditArticleComponent } from './../../modals/edit-article/edit-article.component'
 import { ToastrService } from 'ngx-toastr';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -15,7 +18,8 @@ export class ArticleVirtualReceiptComponent implements OnInit {
 
   editVisible: boolean = false;
 
-  constructor( private artService: ArticleService, 
+  constructor( private artService: ArticleService,
+               private modalService: NgbModal,
                private toastr: ToastrService,
                private translate: TranslateService) { }
 
@@ -28,7 +32,8 @@ export class ArticleVirtualReceiptComponent implements OnInit {
   }
   
   edit(){
-    console.log("Test");
+    const modalRef = this.modalService.open(EditArticleComponent, { centered: true });
+    modalRef.componentInstance.article = this.article;
   }
 
   remove(){

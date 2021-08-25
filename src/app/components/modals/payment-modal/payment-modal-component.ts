@@ -23,7 +23,7 @@ export class PaymentModalComponent {
 
     Pay(mediaType: number){
         this.taService.Pay(mediaType);
-        this.activeModal.close('Close click')
+        this.activeModal.close('Close click');
     }
 
   }

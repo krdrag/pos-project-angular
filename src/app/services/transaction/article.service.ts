@@ -42,8 +42,24 @@ export class ArticleService {
     return true;
   }
 
-  EditArticle(something: any) {
-    
+  EditArticle(article: TaArticle, newPrice: number) {
+    // Remove article and add it again with new price
+    this.store.dispatch(new RemoveTotal());
+
+    this.store.dispatch(new VoidTaObj(article));
+
+    var taObj = new TaArticle({
+      ID: article.ID,
+      price: newPrice,
+      name: article.name,
+      size: article.size
+    });
+
+    this.store.dispatch(new AddTaObj(taObj));
+
+    this.store.dispatch(new AddTotal());
+
+    return true;
   }
 
   GetArticle(barcode: string): Article {

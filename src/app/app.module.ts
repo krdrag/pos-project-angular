@@ -7,6 +7,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgxsModule } from '@ngxs/store';
 import { RouterModule } from '@angular/router';
+import { DigitOnlyModule } from '@uiowa/digit-only';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/general/login/login.component';
@@ -41,6 +42,7 @@ import { SidebarFooterComponent } from './components/general/sidebar-footer/side
 import { PaymentVirtualReceiptComponent } from './components/presentations/payment-virtual-receipt/payment-virtual-receipt.component';
 import { FooterVirtualReceiptComponent } from './components/presentations/footer-virtual-receipt/footer-virtual-receipt.component';
 import { BagsTabComponent } from './components/tabs/bags-tab/bags-tab.component';
+import { EditArticleComponent } from './components/modals/edit-article/edit-article.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +62,8 @@ import { BagsTabComponent } from './components/tabs/bags-tab/bags-tab.component'
     PaymentModalComponent,
     PaymentVirtualReceiptComponent,
     FooterVirtualReceiptComponent,
-    BagsTabComponent
+    BagsTabComponent,
+    EditArticleComponent
   ],
   imports: [
     BrowserModule,
@@ -89,6 +92,7 @@ import { BagsTabComponent } from './components/tabs/bags-tab/bags-tab.component'
             }
         }),
     NgbModule,
+    DigitOnlyModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

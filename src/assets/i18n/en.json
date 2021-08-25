@@ -2,7 +2,9 @@
     "general": {
         "success": "Success",
         "failure": "Failure",
-        "cancel": "Cancel"
+        "cancel": "Cancel",
+        "edit": "Edit",
+        "submit": "Submit"
     },
     "login": {
         "cashierID_label" : "Cashier ID",
