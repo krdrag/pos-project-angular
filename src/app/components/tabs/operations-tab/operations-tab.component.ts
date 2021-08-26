@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { UserService } from 'src/app/services/general/user.service';
 import { TranslateService } from '@ngx-translate/core';
+import { UserService } from './../../../services/general/user.service';
 
 @Component({
   selector: 'app-operations-tab',

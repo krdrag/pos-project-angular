@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Action, Selector, State, StateContext } from "@ngxs/store";
-import { User } from "src/app/models/user.model";
+import { User } from "./../../models/user.model";
 import { Login, Logout } from "./user.actions";
 
 export class UserStateModel {

@@ -1,10 +1,11 @@
-import { StartTransaction, AddTaObj, RemoveTotal, AddTotal, CloseTransaction, VoidTaObj } from './transaction.actions';
 import { Action, Selector, State, StateContext } from '@ngxs/store';
 import { Injectable } from '@angular/core';
-import { Transaction } from 'src/app/models/transaction.model';
+import { Transaction } from './../../models/transaction.model';
 import { IsTaTotal, TaTotal} from "./../../models/TaObjects/taTotal.model"
-import { IsTaArticle, TaArticle } from 'src/app/models/TaObjects/taArticle.model';
-import { TaFooter } from 'src/app/models/TaObjects/taFooter.model';
+import { IsTaArticle, TaArticle } from './../../models/TaObjects/taArticle.model';
+import { TaFooter } from './../../models/TaObjects/taFooter.model';
+import { StartTransaction, AddTaObj, RemoveTotal, AddTotal, CloseTransaction, VoidTaObj } from './transaction.actions';
+
 export class TransactionStateModel {
     transaction: Transaction;
 }

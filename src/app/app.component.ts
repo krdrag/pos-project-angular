@@ -1,15 +1,12 @@
-import { TransactionState } from './stores/transaction/transaction.state';
-import { TransactionService } from './services/transaction/transaction.service';
-import { WorkstationState } from './stores/workstation/workstation.state';
-import { SetWorkstation } from './stores/workstation/workstation.actions';
 import { Component, OnInit } from '@angular/core';
 import { Select, Store } from '@ngxs/store';
 import { Observable } from 'rxjs';
-import { Workstation } from './models/workstation.model';
+import {TranslateService} from '@ngx-translate/core';
 import { WorkstationService } from './services/general/workstation.service';
 import { Transaction } from './models/transaction.model';
 import { UserService } from './services/general/user.service';
-import {TranslateService} from '@ngx-translate/core';
+import { TransactionState } from './stores/transaction/transaction.state';
+import { SetWorkstation } from './stores/workstation/workstation.actions';
 
 @Component({
   selector: 'app-root',

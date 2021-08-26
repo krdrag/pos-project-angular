@@ -1,5 +1,4 @@
-import { User } from "src/app/models/user.model";
-
+import { User } from "./../../models/user.model";
 
 export class Login {
     static readonly type = '[USER] LOGIN'

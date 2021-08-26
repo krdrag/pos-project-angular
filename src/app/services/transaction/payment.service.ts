@@ -1,8 +1,7 @@
-import { TaPayment } from '../../models/TaObjects/taPayment.model';
 import { Injectable } from '@angular/core';
+import { TaPayment } from '../../models/TaObjects/taPayment.model';
 import { Store } from '@ngxs/store';
 import { TaTotal } from '../../models/TaObjects/taTotal.model';
-import { TransactionState } from '../../stores/transaction/transaction.state';
 import { AddTaObj } from '../../stores/transaction/transaction.actions';
 import { Transaction } from '../../models/transaction.model';
 

@@ -1,10 +1,10 @@
-import { UserState } from '../../stores/user/user.state';
 import { Injectable } from '@angular/core';
 import { Store } from '@ngxs/store';
+import * as moment from 'moment';
+import { UserState } from '../../stores/user/user.state';
 import { Users } from '../../mock/users.mock';
 import { User } from '../../models/user.model';
 import { Login, Logout } from '../../stores/user/user.actions';
-import * as moment from 'moment';
 
 @Injectable({
   providedIn: 'root'

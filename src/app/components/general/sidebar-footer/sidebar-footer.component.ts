@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { faCircle, faUserAlt } from '@fortawesome/free-solid-svg-icons';
-import { UserService } from 'src/app/services/general/user.service';
-import { WorkstationService } from 'src/app/services/general/workstation.service';
-import { User } from '../../../models/user.model';
 import {TranslateService} from '@ngx-translate/core';
+import { UserService } from './../../../services/general/user.service';
+import { WorkstationService } from './../../../services/general/workstation.service';
+import { User } from '../../../models/user.model';
 
 @Component({
   selector: 'app-sidebar-footer',

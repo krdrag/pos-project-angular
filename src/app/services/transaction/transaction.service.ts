@@ -1,3 +1,8 @@
+import { Injectable } from '@angular/core';
+import { Store } from '@ngxs/store';
+import { v4 as uuidv4 } from 'uuid';
+import { ToastrService } from 'ngx-toastr';
+import {TranslateService} from '@ngx-translate/core';
 import { StartTransaction, RemoveTotal, AddTotal, CloseTransaction } from '../../stores/transaction/transaction.actions';
 import { PaymentService } from './payment.service';
 import { ArticleService } from './article.service';
@@ -5,11 +10,6 @@ import { WorkstationState } from '../../stores/workstation/workstation.state';
 import { TransactionState } from '../../stores/transaction/transaction.state';
 import { Transaction } from '../../models/transaction.model';
 import { MediaTypes } from '../../mock/media.mock';
-import { Injectable } from '@angular/core';
-import { Store } from '@ngxs/store';
-import { v4 as uuidv4 } from 'uuid';
-import { ToastrService } from 'ngx-toastr';
-import {TranslateService} from '@ngx-translate/core';
 
 @Injectable({
   providedIn: 'root'

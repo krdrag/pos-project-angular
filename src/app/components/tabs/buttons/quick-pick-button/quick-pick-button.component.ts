@@ -1,8 +1,8 @@
+import { Component, Input, OnInit } from '@angular/core';
+import { faTshirt, faMitten, faSocks, faHatCowboy, faTemperatureLow, faSkiing, faVolleyballBall, faSwimmer, faShoppingBag } from '@fortawesome/free-solid-svg-icons';
 import { ArticleService } from './../../../../services/transaction/article.service';
 import { Article } from './../../../../models/article.model';
 import { TransactionService } from './../../../../services/transaction/transaction.service';
-import { Component, Input, OnInit } from '@angular/core';
-import { faTshirt, faMitten, faSocks, faHatCowboy, faTemperatureLow, faSkiing, faVolleyballBall, faSwimmer, faShoppingBag } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-quick-pick-button',

@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { TaPayment } from 'src/app/models/TaObjects/taPayment.model';
 import {TranslateService} from '@ngx-translate/core';
+import { TaPayment } from './../../../models/TaObjects/taPayment.model';
 
 @Component({
   selector: 'app-payment-virtual-receipt',

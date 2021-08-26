@@ -1,4 +1,4 @@
-<div class="container text-center">
+<div class="login-container text-center">
   <div class="form-signin rounded border-blue panel-bg">
     <img class="mb-4" src="assets/logo.png" alt="" width="250" height="250">
     <form [formGroup]="loginForm" novalidate (ngSubmit)="onSubmit()">
@@ -22,8 +22,8 @@
     </form>
     <!--<p>Form status: {{ loginForm.status }}</p> -->
 
-    <img class="flag" src="assets/flags/en.png" alt="" width="50" height="30" (click)="useLanguage('en')">
-    <img class="flag" src="assets/flags/pl.png" alt="" width="50" height="30" (click)="useLanguage('pl')">
+    <img class="flag interactive pointer" src="assets/flags/en.png" alt="" width="50" height="30" (click)="useLanguage('en')">
+    <img class="flag interactive pointer" src="assets/flags/pl.png" alt="" width="50" height="30" (click)="useLanguage('pl')">
 
   </div>
   

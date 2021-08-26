@@ -2,8 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateService } from '@ngx-translate/core';
-import { TaArticle } from 'src/app/models/TaObjects/taArticle.model';
-import { ArticleService } from 'src/app/services/transaction/article.service';
+import { TaArticle } from './../../../models/TaObjects/taArticle.model';
+import { ArticleService } from './../../../services/transaction/article.service';
 
 @Component({
   selector: 'app-edit-article',

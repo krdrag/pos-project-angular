@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Select, Store } from '@ngxs/store';
 import { Observable } from 'rxjs';
-import { TaObject } from 'src/app/models/taObject.model';
-import { IsTaArticle } from 'src/app/models/TaObjects/taArticle.model';
-import { IsTaPayment } from 'src/app/models/TaObjects/taPayment.model';
-import { IsTaFooter } from 'src/app/models/TaObjects/taFooter.model';
-import { IsTaTotal, TaTotal } from 'src/app/models/TaObjects/taTotal.model';
-import { Transaction } from 'src/app/models/transaction.model';
-import { TransactionState } from 'src/app/stores/transaction/transaction.state';
+import { TaObject } from './../../../models/taObject.model';
+import { IsTaArticle } from './../../../models/TaObjects/taArticle.model';
+import { IsTaPayment } from './../../../models/TaObjects/taPayment.model';
+import { IsTaFooter } from './../../../models/TaObjects/taFooter.model';
+import { IsTaTotal, TaTotal } from './../../../models/TaObjects/taTotal.model';
+import { Transaction } from './../../../models/transaction.model';
+import { TransactionState } from './../../../stores/transaction/transaction.state';
 
 @Component({
   selector: 'app-virtual-receipt',

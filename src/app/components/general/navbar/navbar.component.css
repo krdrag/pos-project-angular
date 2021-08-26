@@ -3,13 +3,13 @@
   border-radius: 15px;
 }
 
-.barcode-scanning {
+.status-bar .barcode-scanning {
   padding-top: 5px;
   padding-left: 10px;
   padding-bottom: 5px;
 }
 
-.status-icon {
+.status-bar .status-icon {
   padding-left: 15px;
   padding-right: 15px;
   color: green;

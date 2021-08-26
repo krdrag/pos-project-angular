@@ -1,8 +1,8 @@
+import { Injectable } from '@angular/core';
+import { Store } from '@ngxs/store';
 import { Articles } from '../../mock/articles.mock';
 import { Article } from '../../models/article.model';
-import { Injectable } from '@angular/core';
 import { TaArticle } from '../../models/TaObjects/taArticle.model';
-import { Store } from '@ngxs/store';
 import { AddTaObj, AddTotal, RemoveTotal, VoidTaObj } from '../../stores/transaction/transaction.actions';
 
 @Injectable({

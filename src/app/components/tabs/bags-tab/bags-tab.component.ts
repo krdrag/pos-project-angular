@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BagsTabArticles } from 'src/app/mock/tabsBag.mock';
+import { BagsTabArticles } from './../../../mock/tabsBag.mock';
 
 @Component({
   selector: 'app-bags-tab',

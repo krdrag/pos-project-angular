@@ -1,11 +1,10 @@
-import { Article } from './../../../models/article.model';
 import { Component, Input, OnInit } from '@angular/core';
-import { TaArticle } from 'src/app/models/TaObjects/taArticle.model';
-import { ArticleService } from '../../../services/transaction/article.service'
-import { EditArticleComponent } from './../../modals/edit-article/edit-article.component'
 import { ToastrService } from 'ngx-toastr';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateService } from '@ngx-translate/core';
+import { TaArticle } from './../../../models/TaObjects/taArticle.model';
+import { ArticleService } from './../../../services/transaction/article.service'
+import { EditArticleComponent } from './../../modals/edit-article/edit-article.component'
 
 @Component({
   selector: 'app-article-virtual-receipt',
