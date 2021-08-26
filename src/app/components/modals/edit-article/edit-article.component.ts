@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateService } from '@ngx-translate/core';
 import { TaArticle } from 'src/app/models/TaObjects/taArticle.model';
@@ -27,7 +27,7 @@ export class EditArticleComponent implements OnInit {
 
   createForm() {
     this.editForm = this.fb.group({
-      newPrice: ['']
+      newPrice: ['', Validators.required]
     });
   }
 
