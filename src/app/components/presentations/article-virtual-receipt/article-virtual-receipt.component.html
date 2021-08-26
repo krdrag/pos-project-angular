@@ -1,23 +1,21 @@
-<div class="ta-article panel-bordered">
-    <div class="row">
-        <div class="col-7">
-            {{article.name}}
-        </div>
-        <div class="col d-flex justify-content-end">
-            <p class="text-right">{{article.price}} EUR</p>
-        </div>
-        <div class="col d-flex justify-content-end">
-            <button type="button" class="btn btn-outline-danger">X</button>
-        </div>
+<div class="ta-article noselect">
+  <div class="pointer" (click)="toggleEditMode()">
+    <div class="d-flex flex-row justify-content-between">
+      <div class="p-2">{{ 'tabs.article-label' | translate }}: <b>{{article.name}}</b></div>
+      <div class="p-2">{{ 'tabs.price-label' | translate }}: <b> {{article.price}} EUR</b></div>
+      
     </div>
-    <div class="row">
-        <div class="col-7">
-            <P> Size: </P>
-        </div>
-        <div class="col d-flex justify-content-end">
-            <p class="text-right">{{article.size}}</p>
-        </div>
-        <div class="col d-flex justify-content-end">
-        </div>
+    <div class="d-flex flex-row justify-content-between">
+      <div class="p-2">{{ 'tabs.size-label' | translate }}: <b>{{article.size}}</b></div>
     </div>
+  </div>
+  <div *ngIf="editVisible" class="d-flex flex-row justify-content-between">
+    <div class="p-2">
+      <button type="button" class="btn btn-outline-primary" (click)="edit()">{{ 'transaction.edit-line' | translate }}</button>
+    </div>
+    <div class="p-2">
+      <button type="button" class="btn btn-outline-danger" (click)="remove()">X</button>
+    </div>
+  </div>
+  <hr>
 </div>

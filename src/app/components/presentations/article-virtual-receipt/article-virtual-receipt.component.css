@@ -2,3 +2,12 @@
   margin-top: 3px;
   margin-bottom: 3px;
 }
+
+.ta-article .btn {
+  min-width: 200px;
+  margin-bottom: 15px;
+}
+
+.ta-article .p-2 {
+  margin-right: 15px;
+}

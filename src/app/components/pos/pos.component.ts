@@ -1,5 +1,5 @@
-import { TransactionService } from './../../services/transaction/transaction.service';
 import { Component, OnInit } from '@angular/core';
+import { faShoppingCart, faCartPlus, faShoppingBag, faCog} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-pos',
@@ -8,13 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PosComponent implements OnInit {
 
-  constructor(private taPayment: TransactionService) { }
+  faShoppingCart = faShoppingCart;
+  faCartPlus = faCartPlus;
+  faShoppingBag = faShoppingBag;
+  faCog = faCog;
+
+  constructor() { }
 
   ngOnInit(): void {
   }
-
-  Pay(){
-    this.taPayment.Pay();
-  }
-
 }

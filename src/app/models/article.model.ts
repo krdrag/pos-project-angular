@@ -3,4 +3,5 @@ export interface Article {
     price: number;
     name: string;
     size: string;
+    articleType: number;
 }

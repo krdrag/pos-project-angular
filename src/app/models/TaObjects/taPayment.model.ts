@@ -2,6 +2,7 @@ import { TaObject } from "../taObject.model";
 
 export class TaPayment implements TaObject {
     paid: number;
+    mediaType: number;
 
     public constructor(init?:Partial<TaPayment>) {
         Object.assign(this, init);

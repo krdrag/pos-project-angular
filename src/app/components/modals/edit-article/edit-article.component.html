@@ -1,0 +1,28 @@
+<div class="modal-header">
+    <h4 class="modal-title">{{ 'general.edit' | translate }} {{article.name}}</h4>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()" autocomplete="off">
+      <div class="form-row align-items-center">
+        <div class="col-auto">
+          <label class="sr-only" for="inlineFormInput">Old Price</label>
+          <input  
+                id="decimal-number"
+                type="text"
+                digitOnly
+                decimal="true"
+                placeholder="{{article.price}}"
+                decimalSeparator="."
+                class="form-control mb-2" 
+                formControlName="newPrice" 
+                >
+        </div>
+        <div class="col-auto">
+          <button type="submit" [disabled]="editForm.status == 'INVALID'" class="btn btn-primary mb-2">{{ 'general.submit' | translate }}</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-danger" (click)="activeModal.close('Close click')">{{'general.cancel' | translate}}</button>
+</div>

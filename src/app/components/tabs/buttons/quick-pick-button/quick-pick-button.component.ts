@@ -1,10 +1,8 @@
+import { Component, Input, OnInit } from '@angular/core';
+import { faTshirt, faMitten, faSocks, faHatCowboy, faTemperatureLow, faSkiing, faVolleyballBall, faSwimmer, faShoppingBag } from '@fortawesome/free-solid-svg-icons';
 import { ArticleService } from './../../../../services/transaction/article.service';
 import { Article } from './../../../../models/article.model';
 import { TransactionService } from './../../../../services/transaction/transaction.service';
-import { Component, Input, OnInit } from '@angular/core';
-import { faTshirt } from '@fortawesome/free-solid-svg-icons';
-import {TranslateService} from '@ngx-translate/core';
-import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-quick-pick-button',
@@ -18,11 +16,17 @@ export class QuickPickButtonComponent implements OnInit {
   article: Article;
 
   faTshirt = faTshirt;
+  faMitten = faMitten;
+  faSocks = faSocks;
+  faHatCowboy = faHatCowboy;
+  faTemperatureLow = faTemperatureLow;
+  faSkiing = faSkiing;
+  faVolleyballBall = faVolleyballBall;
+  faSwimmer = faSwimmer;
+  faShoppingBag = faShoppingBag;
 
   constructor(private taServcie: TransactionService, 
-    private artService: ArticleService,
-    private translate: TranslateService, 
-    private toastr: ToastrService) { }
+    private artService: ArticleService) { }
 
   ngOnInit(): void {
     if(this.articleID){
@@ -33,28 +37,10 @@ export class QuickPickButtonComponent implements OnInit {
   }
 
   AddItem(){
-    var result = this.taServcie.ScanBarcode(this.articleID);
+    this.taServcie.ScanBarcode(this.articleID);
+  }
 
-    var header, msg;
-    if(result)
-    {
-      header = this.translate.instant("general.success");
-      msg = this.translate.instant("scanning.scanning-success");
-
-      this.toastr.success(msg, header, {
-        positionClass: 'toast-top-center',
-        timeOut: 2000
-      });
-    }
-    else
-    {
-      header = this.translate.instant("general.failure");
-      msg = this.translate.instant("scanning.scanning-failed");
-
-      this.toastr.error(msg, header, {
-        positionClass: 'toast-top-center',
-        timeOut: 2000
-      });
-    }
+  GetArticleType(): number{
+    return this.article.articleType;
   }
 }

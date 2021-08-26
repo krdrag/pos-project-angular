@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { QuickPickArticles } from 'src/app/mock/quickPick.mock';
+import { QuickPickArticles } from './../../../mock/quickPick.mock';
 
 @Component({
   selector: 'app-quick-pick-tab',

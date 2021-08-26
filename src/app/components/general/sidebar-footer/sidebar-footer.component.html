@@ -1,0 +1,28 @@
+<div class="sidebar-footer">
+    <img class="interactive flag pointer" src="assets/flags/en.png" alt="" width="65" height="40" (click)="useLanguage('en')">
+    <img class="interactive flag pointer" src="assets/flags/pl.png" alt="" width="65" height="40" (click)="useLanguage('pl')">
+    <hr>
+    <div class="operator-info column">
+        <div class="user-pic row" style="font-size: 0.7rem;">
+          <fa-icon class="fa-5x" [icon]="faUserAlt"></fa-icon>
+        </div>
+        <div class="user-info row">
+          <span class="user-name ">{{user.operatorName}}
+            <strong>{{user.operatorLastName}}</strong>
+          </span>
+          <span class="user-role">{{user.role}}</span>
+          <span class="user-status">
+              <fa-icon [icon]="faCircle"></fa-icon>
+            <span>Online</span>
+          </span>
+        </div>
+    </div>
+    <hr>
+    <div>
+      <div class="store-id">{{ 'sidebar.store' | translate}} <strong>{{workstation.storeId}}</strong></div>
+      <div class="workstation-id">{{ 'sidebar.workstation' | translate}} <strong>{{workstation.id}}</strong></div>
+      <div class="time">
+            <app-clock></app-clock>
+      </div>
+    </div>    
+</div>

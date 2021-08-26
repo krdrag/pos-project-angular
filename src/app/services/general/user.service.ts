@@ -1,10 +1,10 @@
-import { UserState } from '../../stores/user/user.state';
 import { Injectable } from '@angular/core';
 import { Store } from '@ngxs/store';
+import * as moment from 'moment';
+import { UserState } from '../../stores/user/user.state';
 import { Users } from '../../mock/users.mock';
 import { User } from '../../models/user.model';
 import { Login, Logout } from '../../stores/user/user.actions';
-import * as moment from 'moment';
 
 @Injectable({
   providedIn: 'root'
@@ -20,9 +20,6 @@ export class UserService {
 
     const userID = window.localStorage.getItem('Cashier');
     const expiryDate = window.localStorage.getItem('ExpiryDate');
-
-    console.log(userID);
-    console.log(expiryDate);
 
     if(userID === undefined || userID === null) return false;
 
@@ -41,7 +38,9 @@ export class UserService {
 
     var user: User = {
       cashierID: userData.cashierID,
-      role: userData.role
+      role: userData.role,
+      operatorName: userData.name,
+      operatorLastName: userData.lastName
     }
     this.store.dispatch(new Login(user));
 
@@ -49,7 +48,11 @@ export class UserService {
 
   }
 
-  IsLoggedIn(): boolean{
+  GetUser(): User {
+    return this.store.selectSnapshot(UserState.getUser);
+  }
+
+  IsLoggedIn(): boolean {
     var user = this.store.selectSnapshot(UserState.getUser);
 
     return user !== undefined;
@@ -64,7 +67,9 @@ export class UserService {
 
     var user: User = {
       cashierID: userData.cashierID,
-      role: userData.role
+      role: userData.role,
+      operatorName: userData.name,
+      operatorLastName: userData.lastName
     }
 
     this.store.dispatch(new Login(user));

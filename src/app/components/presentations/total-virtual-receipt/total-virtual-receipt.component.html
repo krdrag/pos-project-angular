@@ -1,15 +1,43 @@
-<div *ngIf="total !== undefined">
-    <div class="panel-bordered">
-        <div class="row">
-            <div class="col">
-                <h5>{{total.articleQuantity}} articles</h5>
-            </div>
-            <div class="col ">
-                <h5>{{total.totalToPay}} EUR </h5>
-            </div>
-            <div class="col d-flex justify-content-end">
-                <button type="button" class="btn btn-success btn-wide no-padding" >Pay</button>
-            </div>
-        </div>
+<div class="d-flex flex-row justify-content-between total-presentation">
+    <div class="p-2 label">
+        <h4>{{ 'total.articles-count' | translate }}</h4> 
     </div>
-</div> 
+    <div class="p-2 value" *ngIf="total !== undefined">
+        <h4>{{total.articleQuantity}}</h4> 
+    </div>
+</div>
+<div class="d-flex flex-row justify-content-between">
+    <div class="p-2 label">
+        <h4>{{ 'total.total-savings' | translate }}</h4> 
+    </div>
+    <div class="p-2 value" *ngIf="total !== undefined">
+        <h4>0 EUR</h4> 
+    </div>
+</div>
+<hr>
+<div class="d-flex flex-row justify-content-between">
+    <div class="p-2 label">
+        <h4>{{ 'total.total' | translate }}</h4> 
+    </div>
+    <div class="p-2 value" *ngIf="total !== undefined">
+        <h4>{{total.totalToPay}} EUR</h4> 
+    </div>
+</div>
+<div class="d-flex flex-row justify-content-between">
+    <div class="p-2 label">
+        <h4>{{ 'total.tax' | translate }}</h4> 
+    </div>
+    <div class="p-2 value" *ngIf="total !== undefined">
+        <h4>{{total.taxAmount}} EUR</h4> 
+    </div>
+</div>
+<div class="d-flex flex-row justify-content-between">
+    <div class="p-2 label">
+        <h4>{{ 'total.total-net' | translate }}</h4> 
+    </div>
+    <div class="p-2 value" *ngIf="total !== undefined">
+        <h4>{{total.totalNet}} EUR</h4> 
+    </div>
+</div>
+
+<button type="button" class="btn btn-success btn-lg btn-block btn-payment" [disabled]="total === undefined || !IsValid()" (click)="Payment()">{{ 'total.payment-button' | translate }}</button>

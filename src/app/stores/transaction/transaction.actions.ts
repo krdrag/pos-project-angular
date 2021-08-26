@@ -1,5 +1,5 @@
-import { TaObject } from "src/app/models/taObject.model";
-import { Transaction } from "src/app/models/transaction.model";
+import { TaObject } from "./../../models/taObject.model";
+import { Transaction } from "./../../models/transaction.model";
 
 export class StartTransaction {
     static readonly type = '[TRANSACTION] START TRANSACTION'
@@ -9,6 +9,12 @@ export class StartTransaction {
 
 export class AddTaObj {
     static readonly type = '[TRANSACTION] ADD TAOBJ'
+
+    constructor(public payload: TaObject) {}
+}
+
+export class VoidTaObj {
+    static readonly type = '[TRANSACTION] VOID TAOBJ'
 
     constructor(public payload: TaObject) {}
 }

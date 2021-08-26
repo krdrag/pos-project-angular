@@ -1,8 +1,7 @@
-import { SetWorkstation } from './workstation.actions';
-import { Action, Selector, State, StateContext } from '@ngxs/store';
-import { Workstation } from './../../models/workstation.model';
 import { Injectable } from '@angular/core';
-
+import { Action, Selector, State, StateContext } from '@ngxs/store';
+import { SetWorkstation } from './workstation.actions';
+import { Workstation } from './../../models/workstation.model';
 
 export class WorkstationStateModel {
     workstation: Workstation;
