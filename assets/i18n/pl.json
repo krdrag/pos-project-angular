@@ -1,7 +1,10 @@
 {
     "general": {
         "success": "Sukces",
-        "failure": "Niepowodzenie"
+        "failure": "Niepowodzenie",
+        "cancel": "Anuluj",
+        "edit": "Edytuj",
+        "submit": "Akceptuj"
     },
     "login": {
         "cashierID_label" : "ID kasjera",
@@ -12,23 +15,67 @@
         "login_failed_header": "Błąd!",
         "login_failed_body": "ID kasjera albo hasło niepoprawne!"
     },
+    "transaction": {
+        "ta-closed": "Transakcja zakończona.",
+        "edit-line": "Edytuj",
+        "transaction-operations": {
+            "header": "Transakcja",
+            "general-error": "Błąd ogólny",
+            "article-voided": "Artykuł został usunięty."
+        }
+    },
     "scanning": {
         "scanning-success": "Artykuł poprawnie zeskanowany",
-        "scanning-failed": "Wystąpił błąd podczas skanowania."
+        "invalid-barcode": "Niepoprawny kod kreskowy!"
     },
     "sidebar": {
         "cart": "Koszyk",
         "quick-pick": "Szybki wybór",
         "bags": "Torby",
-        "accesories": "Akcesoria",
-        "operations": "Operacje"
+        "operations": "Operacje",
+        "store": "Sklep:",
+        "workstation": "POS:"
     },
     "navbar":{
         "scan-barcode-placeholder": "Zeskanuj kod kreskowy"
     },
+    "total": {
+        "articles-count": "Artykuły:",
+        "total-savings": "Oszczędności:",
+        "total": "Łącznie:",
+        "tax": "Podatek",
+        "total-net": "Łącznie Netto:",
+        "payment-button": "Płatność",
+        "payment-success": "Transakcja zakończona z sukcesem."
+    },
+    "payment": {
+        "modal-message": "Wybierz metodę płatności:",
+        "payment-cash": "Gotówka",
+        "payment-credit-card": "Karta płatnicza",
+        "unknown-medium": "Nieznana metoda płatności",
+        "payment-method": "Metoda płatności:",
+        "paid": "Zapłacono:"
+    },
     "tabs":{
+        "article-label":"Przedmiot",
+        "price-label": "Cena",
         "size-label": "Rozmiar",
         "add-to-cart-button": "Dodaj do koszyka"
+    },
+    "operations": {
+        "ta-utilities": "Narzędzia transakcji",
+        "system-utilities": "System",
+        "device-utilities": "Test urządzeń",
+        "abort-ta": "Przerij transakcję",
+        "return-article": "Zwrot",
+        "void-receipt": "Anuluj rachunek",
+        "correction-receipt":"Korekta",
+        "break": "Przerwa",
+        "sign-off": "Wyloguj",
+        "day-end": "Zamknij dzień",
+        "test-eft": "Terminal EFT",
+        "test-printer": "Drukarka",
+        "test-drawer": "Szuflada"
     },
     "services-status": {
         "header": "Status serwisów",
